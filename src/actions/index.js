@@ -108,11 +108,24 @@ function createActions(bot, state, helpers, goals) {
     placingCraftingTable = false;
   }
 
-  bot.inventory.on('update', () => {
+  const handleInventoryUpdate = () => {
     autoPlaceCraftingTable().catch(() => {
       placingCraftingTable = false;
     });
-  });
+  };
+
+  const setupInventoryWatcher = () => {
+    const { inventory } = bot;
+    if (!inventory || typeof inventory.on !== 'function') {
+      bot.once('spawn', setupInventoryWatcher);
+      return;
+    }
+
+    inventory.on('update', handleInventoryUpdate);
+    handleInventoryUpdate();
+  };
+
+  setupInventoryWatcher();
 
   async function craftItem(itemName, options = {}) {
     const { minCount = 1 } = options;
