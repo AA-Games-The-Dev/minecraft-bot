@@ -81,20 +81,60 @@ function createActions(bot, state, helpers, goals) {
       .catch(() => { setTask(null); });
   }
 
-  async function craftItem(itemName) {
+  let placingCraftingTable = false;
+
+  async function autoPlaceCraftingTable() {
+    if (placingCraftingTable) return;
+
+    const hasCraftingTable = bot.inventory.items().some(i => i.name === 'crafting_table');
+    if (!hasCraftingTable) return;
+
+    const nearbyTable = bot.findBlock({
+      matching: block => block.name.includes('crafting_table'),
+      maxDistance: 4
+    });
+    if (nearbyTable) return;
+
+    placingCraftingTable = true;
+    try {
+      await ensureBlockNearby({
+        findNamePart: 'crafting_table',
+        invItemName: 'crafting_table',
+        searchRange: 4
+      });
+    } catch (error) {
+      // ignore placement errors and reset flag
+    }
+    placingCraftingTable = false;
+  }
+
+  bot.inventory.on('update', () => {
+    autoPlaceCraftingTable().catch(() => {
+      placingCraftingTable = false;
+    });
+  });
+
+  async function craftItem(itemName, options = {}) {
+    const { minCount = 1 } = options;
     const mcData = mcDataLoader(bot.version);
     const item = mcData.itemsByName[itemName];
-    if (!item) return;
+    if (!item) return false;
 
-    const existingItem = bot.inventory.items().find(i => i.name === itemName);
-    if (existingItem) {
+    const inventoryCount = bot.inventory.items()
+      .filter(i => i.name === itemName)
+      .reduce((sum, stack) => sum + stack.count, 0);
+
+    if (inventoryCount >= minCount) {
       bot.chat(`Já tenho ${itemName}`);
-      return;
+      return true;
     }
 
-    const recipe = bot.recipesFor(item.id, null, 1)?.[0];
+    let recipe = bot.recipesFor(item.id, null, 1)?.[0];
     if (!recipe) {
-      return;
+      recipe = bot.recipesAll(item.id, null, true)?.[0];
+    }
+    if (!recipe) {
+      return false;
     }
 
     const requirements = collectRequirements(recipe);
@@ -113,20 +153,27 @@ function createActions(bot, state, helpers, goals) {
       const missDisplay = mcData.items[missingInfo.id]?.displayName || missName;
       bot.chat(`Falta ${missDisplay} pra ${item.displayName}. Vou tentar conseguir~ 🧐`);
 
+      if (missName.includes('planks')) {
+        const craftedPlanks = await craftItem(missName, { minCount: missingInfo.need });
+        if (craftedPlanks) {
+          return craftItem(itemName);
+        }
+      }
+
       if (/log/.test(missName)) {
         setTask('wood');
         state.currentMode = 'mining';
-        return;
+        return false;
       }
 
       if (missName === 'cobblestone') {
         setTask('stone');
         state.currentMode = 'mining';
-        return;
+        return false;
       }
 
       bot.chat('Não sei coletar esse ingrediente automaticamente agora, vou esperar.');
-      return;
+      return false;
     }
 
     let craftingTableBlock = null;
@@ -140,7 +187,14 @@ function createActions(bot, state, helpers, goals) {
       if (!craftingTableBlock) {
         bot.chat('Não tenho mesa por perto e nem no inventário... vou tentar craftar uma!');
         if (itemName !== 'crafting_table') {
-          return craftItem('crafting_table');
+          const crafted = await craftItem('crafting_table');
+          if (!crafted) return false;
+          craftingTableBlock = await ensureBlockNearby({
+            findNamePart: 'crafting_table',
+            invItemName: 'crafting_table',
+            searchRange: 4
+          });
+          if (!craftingTableBlock) return false;
         }
       } else {
         const position = craftingTableBlock.position;
@@ -150,13 +204,17 @@ function createActions(bot, state, helpers, goals) {
       }
     }
 
-    bot.craft(recipe, 1, craftingTableBlock, (error) => {
-      if (error) {
-        bot.chat('Awn... Não consegui craftar');
-      } else {
-        bot.chat(`Craft de ${item.displayName} feito com sucesso`);
+    try {
+      await bot.craft(recipe, 1, craftingTableBlock);
+      bot.chat(`Craft de ${item.displayName} feito com sucesso`);
+      if (itemName === 'crafting_table') {
+        await autoPlaceCraftingTable();
       }
-    });
+      return true;
+    } catch (error) {
+      bot.chat('Awn... Não consegui craftar');
+      return false;
+    }
   }
 
   async function cookFood() {
