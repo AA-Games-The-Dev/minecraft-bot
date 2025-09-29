@@ -47,7 +47,7 @@ e dar {caso queira me dar um item}.`;
       if (!reply) return;
       console.log('🧐 Lais (decisão autônoma):', reply);
       interpretReply(reply.toLowerCase());
-      if (Math.random() < 0.05) bot.chat(reply);
+      // if (Math.random() < 0.05) bot.chat(reply);
     } catch (error) {
       console.error('❌ Erro no LM Studio (contexto):', error);
     }

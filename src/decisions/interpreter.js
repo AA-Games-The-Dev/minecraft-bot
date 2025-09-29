@@ -176,7 +176,7 @@ function createInterpreter(bot, state, actions, helpers, goals) {
         bot.lookAt(player.entity.position.offset(0, 1.5, 0)).catch(() => {});
         bot.tossStack(itemToGive).catch(() => {});
       } else {
-        bot.chat('Sem jogador ou item pra dar agora.');
+        // bot.chat('Sem jogador ou item pra dar agora.');
       }
       return;
     }
