@@ -10,7 +10,7 @@ module.exports = {
     behaviorLoopMs: Number(process.env.BEHAVIOR_LOOP_MS || 1000)
   },
   llm: {
-    endpoint: process.env.LLM_ENDPOINT || 'http://localhost:11434/v1/chat/completions',
+    endpoint: process.env.LLM_ENDPOINT || 'http://localhost:5555/v1/chat/completions',
     model: process.env.LLM_MODEL || 'llama3.1:8b-instruct',
     apiKey: process.env.LLM_API_KEY || null,
     temperature: Number(process.env.LLM_TEMPERATURE || 0.2),
