@@ -88,7 +88,7 @@ function createActions(bot, state, helpers, goals) {
 
     const existingItem = bot.inventory.items().find(i => i.name === itemName);
     if (existingItem) {
-      bot.chat(`Já tenho ${itemName}`);
+      // bot.chat(`Já tenho ${itemName}`);
       return;
     }
 
@@ -111,7 +111,7 @@ function createActions(bot, state, helpers, goals) {
     if (missingInfo) {
       const missName = mcData.items[missingInfo.id]?.name || 'item';
       const missDisplay = mcData.items[missingInfo.id]?.displayName || missName;
-      bot.chat(`Falta ${missDisplay} pra ${item.displayName}. Vou tentar conseguir~ 🧐`);
+      // bot.chat(`Falta ${missDisplay} pra ${item.displayName}. Vou tentar conseguir~ 🧐`);
 
       if (/log/.test(missName)) {
         setTask('wood');
@@ -125,7 +125,7 @@ function createActions(bot, state, helpers, goals) {
         return;
       }
 
-      bot.chat('Não sei coletar esse ingrediente automaticamente agora, vou esperar.');
+      // bot.chat('Não sei coletar esse ingrediente automaticamente agora, vou esperar.');
       return;
     }
 
@@ -138,7 +138,7 @@ function createActions(bot, state, helpers, goals) {
       });
 
       if (!craftingTableBlock) {
-        bot.chat('Não tenho mesa por perto e nem no inventário... vou tentar craftar uma!');
+        // bot.chat('Não tenho mesa por perto e nem no inventário... vou tentar craftar uma!');
         if (itemName !== 'crafting_table') {
           return craftItem('crafting_table');
         }
@@ -152,9 +152,9 @@ function createActions(bot, state, helpers, goals) {
 
     bot.craft(recipe, 1, craftingTableBlock, (error) => {
       if (error) {
-        bot.chat('Awn... Não consegui craftar');
+        // bot.chat('Awn... Não consegui craftar');
       } else {
-        bot.chat(`Craft de ${item.displayName} feito com sucesso`);
+        // bot.chat(`Craft de ${item.displayName} feito com sucesso`);
       }
     });
   }
@@ -168,7 +168,7 @@ function createActions(bot, state, helpers, goals) {
     );
 
     if (!rawFood) {
-      bot.chat('Não achei comida crua pra cozinhar');
+      // bot.chat('Não achei comida crua pra cozinhar');
       return;
     }
 
@@ -194,9 +194,9 @@ function createActions(bot, state, helpers, goals) {
 
         if (fuel) {
           await furnace.putFuel(fuel.type, null, fuel.count);
-          bot.chat('Comida no forno');
+          // bot.chat('Comida no forno');
         } else {
-          bot.chat('Não achei combustível...');
+          // bot.chat('Não achei combustível...');
           furnace.close();
           setBusy(false);
           return;
@@ -207,7 +207,7 @@ function createActions(bot, state, helpers, goals) {
           if (output) {
             try {
               await furnace.takeOutput();
-              bot.chat('Yay~ Comida assada!');
+              // bot.chat('Yay~ Comida assada!');
             } catch (error) {
               // ignore error when taking output
             }
@@ -217,7 +217,7 @@ function createActions(bot, state, helpers, goals) {
           }
         }, 1000);
       } catch (error) {
-        bot.chat('Hmm... Não consegui usar a fornalha');
+        // bot.chat('Hmm... Não consegui usar a fornalha');
         setBusy(false);
       }
     }
@@ -225,7 +225,7 @@ function createActions(bot, state, helpers, goals) {
     if (furnaceBlock) {
       goAndCook(furnaceBlock.position);
     } else {
-      bot.chat('Não achei/coloquei fornalha… vou tentar craftar uma!');
+      // bot.chat('Não achei/coloquei fornalha… vou tentar craftar uma!');
       const cobbleId = mcData.itemsByName.cobblestone.id;
       const cobbleCount = bot.inventory.items()
         .filter(i => i.type === cobbleId)
@@ -236,9 +236,9 @@ function createActions(bot, state, helpers, goals) {
         if (furnaceRecipe) {
           bot.craft(furnaceRecipe, 1, null, async (error) => {
             if (error) {
-              bot.chat('não consegui craftar a fornalha');
+              // bot.chat('não consegui craftar a fornalha');
             } else {
-              bot.chat('Fornalha craftada!');
+              // bot.chat('Fornalha craftada!');
               const placed = await ensureBlockNearby({
                 findNamePart: 'furnace',
                 invItemName: 'furnace',
@@ -249,7 +249,7 @@ function createActions(bot, state, helpers, goals) {
           });
         }
       } else {
-        bot.chat('Hmm... Não tenho pedras suficientes pra fazer uma fornalha');
+        // bot.chat('Hmm... Não tenho pedras suficientes pra fazer uma fornalha');
       }
     }
   }
@@ -263,10 +263,12 @@ function createActions(bot, state, helpers, goals) {
         maxDistance: 32
       });
       if (foodBlock) {
-        bot.chat('Achei plantações, vou colher!');
+        // bot.chat('Achei plantações, vou colher!');
         const position = foodBlock.position;
         await bot.pathfinder.goto(new GoalNear(position.x, position.y, position.z, 1)).catch(() => {});
-        await bot.dig(foodBlock).catch(() => bot.chat('Não consegui colher a plantinha'));
+        await bot.dig(foodBlock).catch(() => {
+          // bot.chat('Não consegui colher a plantinha');
+        });
         return true;
       }
       return false;
@@ -279,7 +281,7 @@ function createActions(bot, state, helpers, goals) {
 
       if (prey) {
         state.memory.lastAction = `Caçando ${prey.name} 🐷`;
-        bot.chat(`Achei um ${prey.name}, indo caçar!`);
+        // bot.chat(`Achei um ${prey.name}, indo caçar!`);
         await bot.pathfinder.goto(new GoalFollow(prey, 1)).catch(() => {});
         const deathPos = prey.position.clone();
 
@@ -290,7 +292,7 @@ function createActions(bot, state, helpers, goals) {
         }
 
         await bot.pathfinder.goto(new GoalNear(deathPos.x, deathPos.y, deathPos.z, 1)).catch(() => {});
-        bot.chat(`${prey.name} derrotado! Vamos ver se peguei comida...`);
+        // bot.chat(`${prey.name} derrotado! Vamos ver se peguei comida...`);
         return true;
       }
 
@@ -302,7 +304,7 @@ function createActions(bot, state, helpers, goals) {
         ['beef', 'porkchop', 'chicken', 'mutton', 'apple', 'bread'].some(f => i.name.includes(f))
       );
       if (food) {
-        bot.chat('Yay~ Consegui comida!');
+        // bot.chat('Yay~ Consegui comida!');
         setBusy(false);
         return;
       }
@@ -313,7 +315,7 @@ function createActions(bot, state, helpers, goals) {
       const dx = Math.floor(Math.random() * 10 - 5);
       const dz = Math.floor(Math.random() * 10 - 5);
       const target = bot.entity.position.offset(dx, 0, dz);
-      bot.chat('Procurando mais comidinhas...');
+      // bot.chat('Procurando mais comidinhas...');
       await bot.pathfinder.goto(new GoalNear(target.x, target.y, target.z, 1)).catch(() => {});
     }
 
