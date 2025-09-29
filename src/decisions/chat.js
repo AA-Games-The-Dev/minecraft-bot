@@ -37,7 +37,15 @@ function createChatDecision(bot, state, interpretReply, config) {
       context = '';
     }
 
-    const prompt = `Você é uma IA chamada Lais, um bot do Minecraft que age com carinho e inteligência.\n${statusBlock}\nInventário: ${inventory}\n\nContexto recuperado:\n${context || 'Nenhum trecho encontrado.'}\n\nUm jogador chamado "${username}" disse: "${message}"\n\nSua memória recente:\n- Última ação: ${state.memory.lastAction || 'nenhuma'}\n- Último item entregue: ${state.memory.lastItemGiven || 'nenhum'}\n\nSempre responda da seguinte forma: COMANDO e depois responda naturalmente :). Em COMANDO você pode colocar somente as seguintes palavras:\nfugir, lutar, comer, dormir, esconder, subir, cozinhar, abrigo, explorar, craftar (nome do item que podem ser machado, picareta, espada, pá, enxada, tabuas, graveto, fornalha, mesa de trabalho, baú, porta, botão, lavanca, placa, escada), seguir, minerar, coletar_madeira e dar.`;
+    const prompt = `Você é uma IA chamada Lais, um bot do Minecraft que age com carinho e inteligência.\n
+    ${statusBlock}\n
+    Inventário: ${inventory}\n\nContexto recuperado:\n
+    ${context || 'Nenhum trecho encontrado.'}\n\n
+    Um jogador chamado "${username}" disse: "${message}"\n\n
+    Sua memória recente:\n- Última ação: ${state.memory.lastAction || 'nenhuma'}\n- Último item entregue: ${state.memory.lastItemGiven || 'nenhum'}\n\n
+    Sempre responda da seguinte forma: COMANDO (Mas só se o jogador pedir algo, se ele perguntar algo não precisa colocar COMANDO) e depois responda naturalmente :). 
+    Em COMANDO você pode colocar somente as seguintes palavras:\n
+    fugir, lutar, comer, dormir, esconder, subir, cozinhar, abrigo, explorar, craftar (nome do item que podem ser machado, picareta, espada, pá, enxada, tabuas, graveto, fornalha, mesa de trabalho, baú, porta, botão, lavanca, placa, escada), seguir, minerar, coletar_madeira e dar.`;
 
     try {
       const reply = await sendChatCompletion(config.llm, [
@@ -51,7 +59,7 @@ function createChatDecision(bot, state, interpretReply, config) {
       interpretReply(reply.toLowerCase());
     } catch (error) {
       console.error('❌ Erro no LM Studio (mensagem de jogador):', error.message || error);
-      bot.chat('Tive probleminhas pra entender... 😿');
+      bot.chat('Tive problemas pra entender...');
     }
   });
 }
