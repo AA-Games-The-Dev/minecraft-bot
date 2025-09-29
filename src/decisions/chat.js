@@ -1,4 +1,5 @@
 const { sendChatCompletion } = require('../services/llm');
+const { retrieveAnswer } = require('../services/rag');
 
 function createChatDecision(bot, state, interpretReply, config) {
   bot.on('chat', async (username, message) => {
@@ -10,6 +11,23 @@ function createChatDecision(bot, state, interpretReply, config) {
 
     state.blockAutoDecisionUntil = now + config.autoDecisionBlockMs;
     state.memory.lastSpeaker = username;
+
+    // First attempt to answer using our internal RAG knowledge base.  If the
+    // player asks a question about crafting or core mechanics, respond
+    // immediately with a prewritten explanation.  This prevents the LLM from
+    // producing unpredictable answers when a concise, factual one is
+    // available.
+    try {
+      const ragAnswer = retrieveAnswer(message);
+      if (ragAnswer) {
+        bot.chat(ragAnswer);
+        // When answering a factual question we do not interpret a
+        // command, so return early.
+        return;
+      }
+    } catch (err) {
+      // Ignore retrieval errors and fall back to LLM logic
+    }
 
     const prompt = `Você é uma IA chamada Lais, um bot do Minecraft que age com carinho e inteligência.
 Seu status:

@@ -1,0 +1,17 @@
+{
+  "name": "minecraft-rag-bot",
+  "version": "1.0.0",
+  "description": "Bot do Minecraft com RAG e LLM aberto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "ingest": "node scripts/ingest.js",
+    "eval": "node scripts/eval.js"
+  },
+  "dependencies": {
+    "mineflayer": "^4.6.0",
+    "mineflayer-pathfinder": "^2.6.5",
+    "mineflayer-collectblock": "^1.4.0",
+    "axios": "^1.6.0"
+  }
+}
