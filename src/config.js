@@ -1,24 +1,27 @@
 module.exports = {
   connection: {
-    host: 'localhost',
-    port: 25565,
-    username: 'Lais',
-    version: '1.20.1'
+    host: process.env.BOT_HOST || 'localhost',
+    port: Number(process.env.BOT_PORT || 25565),
+    username: process.env.BOT_USERNAME || 'Lais',
+    version: process.env.BOT_VERSION || '1.20.1'
   },
   intervals: {
-    contextCheckMs: 10000,
-    behaviorLoopMs: 1000
+    contextCheckMs: Number(process.env.CONTEXT_CHECK_MS || 10000),
+    behaviorLoopMs: Number(process.env.BEHAVIOR_LOOP_MS || 1000)
   },
-  // Configurações do LLM. O trabalho requer o uso de um modelo de linguagem
-  // aberto em vez de serviços proprietários. Aqui configuramos o endpoint
-  // padrão do Ollama (rodando em localhost) e especificamos um modelo
-  // open‑source compatível, como Llama 3.1 8B Instruct ou Mistral 7B
-  // Instruct. Para mudar o modelo basta alterar o campo `model`.
   llm: {
-    endpoint: 'http://localhost:11434/v1/chat/completions',
-    model: 'llama3.1:8b-instruct'
+    endpoint: process.env.LLM_ENDPOINT || 'http://localhost:11434/v1/chat/completions',
+    model: process.env.LLM_MODEL || 'llama3.1:8b-instruct',
+    apiKey: process.env.LLM_API_KEY || null,
+    temperature: Number(process.env.LLM_TEMPERATURE || 0.2),
+    maxTokens: process.env.LLM_MAX_TOKENS ? Number(process.env.LLM_MAX_TOKENS) : undefined,
+    headers: {},
+    timeoutMs: Number(process.env.LLM_TIMEOUT_MS || 120000)
   },
-  antiSpamCooldownMs: 3000,
-  autoDecisionBlockMs: 5000,
-  visionRange: 16
+  embeddings: {
+    model: process.env.EMBEDDING_MODEL || 'Xenova/all-MiniLM-L6-v2'
+  },
+  antiSpamCooldownMs: Number(process.env.ANTI_SPAM_COOLDOWN_MS || 3000),
+  autoDecisionBlockMs: Number(process.env.AUTO_DECISION_BLOCK_MS || 5000),
+  visionRange: Number(process.env.VISION_RANGE || 16)
 };

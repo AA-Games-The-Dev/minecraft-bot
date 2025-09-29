@@ -1,5 +1,5 @@
 const { sendChatCompletion } = require('../services/llm');
-const { retrieveAnswer } = require('../services/rag');
+const { retrieveAnswer, buildContextSnippet } = require('../services/rag');
 
 function createChatDecision(bot, state, interpretReply, config) {
   bot.on('chat', async (username, message) => {
@@ -12,41 +12,36 @@ function createChatDecision(bot, state, interpretReply, config) {
     state.blockAutoDecisionUntil = now + config.autoDecisionBlockMs;
     state.memory.lastSpeaker = username;
 
-    // First attempt to answer using our internal RAG knowledge base.  If the
-    // player asks a question about crafting or core mechanics, respond
-    // immediately with a prewritten explanation.  This prevents the LLM from
-    // producing unpredictable answers when a concise, factual one is
-    // available.
     try {
-      const ragAnswer = retrieveAnswer(message);
+      const ragAnswer = await retrieveAnswer(message);
       if (ragAnswer) {
-        bot.chat(ragAnswer);
-        // When answering a factual question we do not interpret a
-        // command, so return early.
+        bot.chat(ragAnswer.text);
         return;
       }
     } catch (err) {
-      // Ignore retrieval errors and fall back to LLM logic
+      console.error('❌ Erro ao recuperar contexto local:', err.message);
     }
 
-    const prompt = `Você é uma IA chamada Lais, um bot do Minecraft que age com carinho e inteligência.
-Seu status:
-- Vida: ${bot.health}/20
-- Comida: ${bot.food}/20
-Inventário: ${bot.inventory.items().map(i => i.name).join(', ') || 'vazio'}
+    const statusBlock = `Seu status:\n- Vida: ${bot.health}/20\n- Comida: ${bot.food}/20`;
+    const inventory = bot.inventory.items().map((i) => i.name).join(', ') || 'vazio';
 
-Um jogador chamado "${username}" disse: "${message}"
+    let context = '';
+    try {
+      const snippets = await buildContextSnippet(message, { k: 3 });
+      if (snippets.length > 0) {
+        context = snippets
+          .map((snippet) => `Fonte ${snippet.rank} (${snippet.type} - ${snippet.sourceId}) [score ${snippet.score.toFixed(3)}]:\n${snippet.text}`)
+          .join('\n\n');
+      }
+    } catch (err) {
+      context = '';
+    }
 
-Sua memória recente:
-- Última ação: ${state.memory.lastAction || 'nenhuma'}
-- Último item entregue: ${state.memory.lastItemGiven || 'nenhum'}
-
-Sempre responda da seguinte forma: COMANDO e depois seja responda naturalmente :). Em COMANDO você pode colocar somente as seguintes palavras:
-fugir, lutar, comer, dormir, esconder, subir, cozinhar, abrigo, explorar, craftar (nome do item que podem ser machado, picareta, espada, pá, enxada, tabuas, graveto, fornalha, mesa de trabalho, baú, porta, botão, lavanca, placa, escada), seguir, minerar, coletar_madeira e dar.`;
+    const prompt = `Você é uma IA chamada Lais, um bot do Minecraft que age com carinho e inteligência.\n${statusBlock}\nInventário: ${inventory}\n\nContexto recuperado:\n${context || 'Nenhum trecho encontrado.'}\n\nUm jogador chamado "${username}" disse: "${message}"\n\nSua memória recente:\n- Última ação: ${state.memory.lastAction || 'nenhuma'}\n- Último item entregue: ${state.memory.lastItemGiven || 'nenhum'}\n\nSempre responda da seguinte forma: COMANDO e depois responda naturalmente :). Em COMANDO você pode colocar somente as seguintes palavras:\nfugir, lutar, comer, dormir, esconder, subir, cozinhar, abrigo, explorar, craftar (nome do item que podem ser machado, picareta, espada, pá, enxada, tabuas, graveto, fornalha, mesa de trabalho, baú, porta, botão, lavanca, placa, escada), seguir, minerar, coletar_madeira e dar.`;
 
     try {
       const reply = await sendChatCompletion(config.llm, [
-        { role: 'system', content: 'Você é uma IA chamada Lais que vive dentro do Minecraft. Fale como alguem que conhece minecraft e aja de forma direta.' },
+        { role: 'system', content: 'Você é uma IA chamada Lais que vive dentro do Minecraft. Fale como alguém que conhece Minecraft e aja de forma direta. Use o contexto apenas se for útil.' },
         { role: 'user', content: prompt }
       ]);
 
@@ -55,7 +50,7 @@ fugir, lutar, comer, dormir, esconder, subir, cozinhar, abrigo, explorar, crafta
       bot.chat(reply);
       interpretReply(reply.toLowerCase());
     } catch (error) {
-      console.error('❌ Erro no LM Studio (mensagem de jogador):', error);
+      console.error('❌ Erro no LM Studio (mensagem de jogador):', error.message || error);
       bot.chat('Tive probleminhas pra entender... 😿');
     }
   });

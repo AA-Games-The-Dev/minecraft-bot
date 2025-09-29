@@ -8,7 +8,13 @@
     ],
     "resposta_ref": "Para fazer uma picareta de madeira, transforme um tronco em tábuas, faça dois gravetos e, na mesa de trabalho 3×3, coloque 3 tábuas na linha superior e 2 gravetos na coluna central. Essa ferramenta é usada para minerar pedra e minérios básicos.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Ferramentas de madeira",
+        "descricao": "Resumo das receitas iniciais, incluindo a picareta de madeira."
+      }
+    ]
   },
   {
     "id": "machado_madeira",
@@ -18,7 +24,13 @@
     ],
     "resposta_ref": "Para criar um machado de madeira, produza tábuas a partir de um tronco, crie dois gravetos e, em seguida, coloque 3 tábuas em ‘L’ no canto superior esquerdo da grade 3×3 e 2 gravetos na coluna central. O machado corta madeira e objetos de madeira mais rápido.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Ferramentas de madeira",
+        "descricao": "Instruções sobre a formação em L e a utilidade do machado."
+      }
+    ]
   },
   {
     "id": "espada_madeira",
@@ -28,7 +40,13 @@
     ],
     "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Ferramentas de madeira",
+        "descricao": "Explica a coluna central de tábuas e o graveto inferior da espada."
+      }
+    ]
   },
   {
     "id": "pá_madeira",
@@ -38,7 +56,13 @@
     ],
     "resposta_ref": "Para fazer uma pá de madeira, coloque 1 graveto na segunda linha, 1 graveto na terceira linha e uma tábua na primeira linha da coluna central. A pá é útil para cavar terra, areia e cascalho de forma mais eficiente.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Ferramentas de madeira",
+        "descricao": "Detalhes sobre a pá e seu arranjo vertical."
+      }
+    ]
   },
   {
     "id": "enxada_madeira",
@@ -48,7 +72,13 @@
     ],
     "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Ferramentas de madeira",
+        "descricao": "Passo a passo para montar a enxada."
+      }
+    ]
   },
   {
     "id": "graveto",
@@ -58,7 +88,13 @@
     ],
     "resposta_ref": "Gravetos (sticks) são produzidos combinando duas tábuas de madeira na vertical, resultando em quatro gravetos. Eles servem de cabo para ferramentas, armas, tochas e muito mais.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Guia rápido de crafting básico",
+        "descricao": "Introduz a conversão de troncos em tábuas e gravetos."
+      }
+    ]
   },
   {
     "id": "tábuas",
@@ -68,7 +104,13 @@
     ],
     "resposta_ref": "Tábuas de madeira são obtidas ao colocar um tronco (log) no quadrado de 2×2 do inventário ou na mesa de trabalho; cada tronco rende quatro tábuas. Elas são base para muitos outros itens.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Guia rápido de crafting básico",
+        "descricao": "Contexto sobre transformação de troncos em tábuas."
+      }
+    ]
   },
   {
     "id": "mesa_trabalho",
@@ -78,7 +120,13 @@
     ],
     "resposta_ref": "A mesa de trabalho (crafting table) se faz com quatro tábuas de madeira dispostas em um quadrado 2×2. Ao colocar a mesa no chão e clicar com o botão direito, você obtém uma grade 3×3 para criar receitas mais complexas.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Blocos utilitários",
+        "descricao": "Explica a função da mesa de trabalho e sua receita."
+      }
+    ]
   },
   {
     "id": "fornalha",
@@ -88,7 +136,13 @@
     ],
     "resposta_ref": "A fornalha é criada posicionando oito blocos de pedra ou pedregulho ao redor da grade de 3×3, deixando o centro vazio. Ela permite cozinhar alimentos e fundir minérios.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Blocos utilitários",
+        "descricao": "Trecho sobre a receita da fornalha e seus usos."
+      }
+    ]
   },
   {
     "id": "bau",
@@ -98,7 +152,13 @@
     ],
     "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Blocos utilitários",
+        "descricao": "Descreve a montagem do baú e sua finalidade."
+      }
+    ]
   },
   {
     "id": "tocha",
@@ -108,7 +168,13 @@
     ],
     "resposta_ref": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Iluminação e movimento",
+        "descricao": "Trecho que trata da receita e utilidade das tochas."
+      }
+    ]
   },
   {
     "id": "escada",
@@ -118,7 +184,13 @@
     ],
     "resposta_ref": "Escadas são criadas com sete gravetos dispostos em forma de ‘H’: três gravetos na coluna esquerda, três na coluna direita e um no centro da linha do meio. Três escadas são geradas e permitem subir verticalmente.",
     "fontes": ["Minecraft crafting guide"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "crafting_basics.md",
+        "secao": "Iluminação e movimento",
+        "descricao": "Descreve a receita das escadas e seu uso para mobilidade."
+      }
+    ]
   },
   {
     "id": "vida_fome",
@@ -128,6 +200,12 @@
     ],
     "resposta_ref": "No Minecraft, a barra de vida exibe dez corações, cada um valendo dois pontos, totalizando 20 pontos de vida. Dano reduz esses pontos; com fome cheia, a vida se regenera. A barra de fome possui dez ícones de coxa de frango; cada metade representa um ponto de fome. A fome diminui quando você corre, minera ou luta e aumenta ao comer alimentos. Quando a fome está acima de 18, ocorre regeneração de vida; abaixo de 6 você não pode correr; se chegar a zero, a vida começa a diminuir.",
     "fontes": ["Simple Guide to Minecraft"],
-    "trechos": []
+    "trechos": [
+      {
+        "doc": "survival_basics.md",
+        "secao": "Sobrevivência inicial",
+        "descricao": "Explica a relação entre fome, regeneração e segurança."
+      }
+    ]
   }
 ]

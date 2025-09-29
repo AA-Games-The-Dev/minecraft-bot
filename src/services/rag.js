@@ -1,93 +1,102 @@
 /*
- * Módulo de recuperação para o bot Minecraft. Esta implementação
- * carrega um índice construído a partir do dataset em `data/recipes.json`.
- * Cada documento do índice contém um conjunto de tokens que
- * representam as perguntas e a resposta de referência associada.
- * Dado uma pergunta do jogador, calculamos a similaridade Jaccard
- * entre os tokens da pergunta e os tokens de cada documento. Os
- * documentos são então ordenados em ordem decrescente de
- * similaridade. A função `retrieveTopK` retorna os k documentos
- * mais relevantes, enquanto `retrieveAnswer` retorna somente a
- * resposta de referência do documento mais relevante ou null se
- * nenhum documento obtiver correspondência significativa.
+ * Módulo de recuperação baseado em embeddings para o bot Minecraft.
+ * O índice é gerado pelo script `scripts/ingest.js`, que extrai
+ * embeddings de sentenças usando modelos open‑source do pacote
+ * `@xenova/transformers` e salva vetores normalizados em
+ * `data/index.json`. Cada entrada pode representar tanto exemplos de
+ * perguntas/respostas (FAQ) quanto trechos de documentos externos.
  *
- * Este módulo é planejado para servir como substituto de uma
- * recuperação baseada em embeddings. Quando recursos como
- * ChromaDB ou Faiss estiverem disponíveis, basta alterar a
- * implementação de `retrieveTopK` para consultar esses bancos de
- * vetores.
+ * Dada uma consulta do jogador, este módulo embebe a pergunta no mesmo
+ * espaço vetorial e calcula similaridade coseno com todos os vetores.
+ * Os documentos são ordenados pelo score e retornados em ordem
+ * decrescente. A função `retrieveAnswer` prioriza respostas
+ * parametrizadas do FAQ quando a similaridade ultrapassa um limiar,
+ * enquanto `retrieveTopK` retorna os trechos mais relevantes para uso
+ * em prompts de LLM ou para inspeção manual.
  */
 
 const fs = require('fs');
 const path = require('path');
+const config = require('../config');
+const { loadEmbedder, embedText } = require('./embeddings');
 
-// Carrega o índice e o dataset apenas uma vez ao iniciar.
-let index = null;
+let indexCache = null;
+
 function loadIndex() {
-  if (index) return index;
+  if (indexCache) return indexCache;
   const indexPath = path.join(__dirname, '..', 'data', 'index.json');
   if (!fs.existsSync(indexPath)) {
     throw new Error('Índice não encontrado. Execute `npm run ingest` para gerar o arquivo index.json.');
   }
-  index = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-  return index;
+  const raw = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+  indexCache = raw.map((doc) => ({
+    ...doc,
+    embedding: Float32Array.from(doc.embedding)
+  }));
+  return indexCache;
 }
 
-// Tokenização semelhante à usada no script de ingestão
-function tokenize(text) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9áéíóúãõâêôç\s]/gi, ' ')
-    .split(/\s+/)
-    .filter((t) => t.length > 1);
-}
-
-// Similaridade Jaccard entre dois conjuntos de tokens
-function jaccard(tokensA, tokensB) {
-  const setA = new Set(tokensA);
-  const setB = new Set(tokensB);
-  let intersection = 0;
-  for (const t of setA) {
-    if (setB.has(t)) intersection++;
+function cosineSimilarity(a, b) {
+  let sum = 0;
+  for (let i = 0; i < a.length; i++) {
+    sum += a[i] * b[i];
   }
-  const union = setA.size + setB.size - intersection;
-  return union === 0 ? 0 : intersection / union;
+  return sum;
 }
 
-/**
- * Recupera os k documentos mais semelhantes ao texto de consulta.
- * @param {string} query Pergunta enviada pelo jogador.
- * @param {number} k Quantidade de documentos a retornar.
- * @returns {Array<{id: string, score: number, resposta_ref: string}>}
- */
-function retrieveTopK(query, k = 3) {
+async function embedQuery(text) {
+  const embedder = await loadEmbedder(config.embeddings?.model);
+  const vector = await embedText(text, { embedder });
+  return Float32Array.from(vector);
+}
+
+async function retrieveTopK(query, k = 3) {
   if (!query) return [];
-  const qTokens = tokenize(query);
   const docs = loadIndex();
+  if (docs.length === 0) return [];
+
+  const queryEmbedding = await embedQuery(query);
   const scored = docs
-    .map((doc) => {
-      const score = jaccard(qTokens, doc.tokens);
-      return { id: doc.id, score, resposta_ref: doc.resposta_ref };
-    })
+    .map((doc) => ({
+      id: doc.id,
+      sourceId: doc.source_id,
+      type: doc.type,
+      score: cosineSimilarity(queryEmbedding, doc.embedding),
+      text: doc.text,
+      resposta_ref: doc.resposta_ref || null,
+      metadata: doc.metadata || {}
+    }))
     .sort((a, b) => b.score - a.score);
+
   return scored.slice(0, k);
 }
 
-/**
- * Recupera a resposta mais provável para a pergunta fornecida. Caso
- * o score máximo seja 0 (nenhuma sobreposição de tokens), retorna
- * null para permitir que a lógica superior recorra a outras ações
- * (por exemplo, perguntar a um LLM).
- * @param {string} query Pergunta enviada pelo jogador.
- * @returns {string|null} A resposta de referência se houver uma correspondência, caso contrário null.
- */
-function retrieveAnswer(query) {
-  const top = retrieveTopK(query, 1)[0];
-  if (!top || top.score === 0) return null;
-  return top.resposta_ref;
+async function retrieveAnswer(query, options = {}) {
+  const { minScore = 0.45, k = 5 } = options;
+  const top = await retrieveTopK(query, k);
+  const candidate = top.find((doc) => doc.type === 'faq' && doc.resposta_ref && doc.score >= minScore);
+  if (!candidate) return null;
+  return {
+    text: candidate.resposta_ref,
+    score: candidate.score,
+    sourceId: candidate.sourceId,
+    metadata: candidate.metadata
+  };
+}
+
+async function buildContextSnippet(query, { k = 3 } = {}) {
+  const top = await retrieveTopK(query, k);
+  return top.map((doc, index) => ({
+    rank: index + 1,
+    score: doc.score,
+    type: doc.type,
+    sourceId: doc.sourceId,
+    text: doc.text
+  }));
 }
 
 module.exports = {
   retrieveTopK,
-  retrieveAnswer
+  retrieveAnswer,
+  buildContextSnippet
 };
