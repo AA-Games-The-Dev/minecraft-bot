@@ -19,7 +19,10 @@ module.exports = {
     timeoutMs: Number(process.env.LLM_TIMEOUT_MS || 120000)
   },
   embeddings: {
-    model: process.env.EMBEDDING_MODEL || 'Xenova/all-MiniLM-L6-v2'
+    model: process.env.EMBEDDING_MODEL || 'Xenova/all-MiniLM-L6-v2',
+    lexicalWeight: process.env.EMBEDDING_LEXICAL_WEIGHT
+      ? Number(process.env.EMBEDDING_LEXICAL_WEIGHT)
+      : 0.35
   },
   antiSpamCooldownMs: Number(process.env.ANTI_SPAM_COOLDOWN_MS || 3000),
   autoDecisionBlockMs: Number(process.env.AUTO_DECISION_BLOCK_MS || 5000),
