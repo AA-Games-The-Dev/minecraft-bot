@@ -1,211 +1,226 @@
 [
   {
-    "id": "picareta_madeira",
-    "pergunta": [
-      "como fazer uma picareta de madeira?",
-      "como crafting de pickaxe?",
-      "como faço uma picareta?"
+    "id": "tocha",
+    "question": [
+      "how to make torch",
+      "what is the recipe for torch",
+      "how to craft torch",
+      "can you make torch with charcoal",
+      "how to light with torch at the beginning"
     ],
-    "resposta_ref": "Para fazer uma picareta de madeira, transforme um tronco em tábuas, faça dois gravetos e, na mesa de trabalho 3×3, coloque 3 tábuas na linha superior e 2 gravetos na coluna central. Essa ferramenta é usada para minerar pedra e minérios básicos.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Ferramentas de madeira",
-        "descricao": "Resumo das receitas iniciais, incluindo a picareta de madeira."
-      }
-    ]
-  },
-  {
-    "id": "machado_madeira",
-    "pergunta": [
-      "como faço um machado de madeira?",
-      "qual a receita de axe?"
-    ],
-    "resposta_ref": "Para criar um machado de madeira, produza tábuas a partir de um tronco, crie dois gravetos e, em seguida, coloque 3 tábuas em ‘L’ no canto superior esquerdo da grade 3×3 e 2 gravetos na coluna central. O machado corta madeira e objetos de madeira mais rápido.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Ferramentas de madeira",
-        "descricao": "Instruções sobre a formação em L e a utilidade do machado."
-      }
-    ]
-  },
-  {
-    "id": "espada_madeira",
-    "pergunta": [
-      "como faço uma espada?",
-      "como craftar sword?"
-    ],
-    "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Ferramentas de madeira",
-        "descricao": "Explica a coluna central de tábuas e o graveto inferior da espada."
-      }
-    ]
-  },
-  {
-    "id": "pá_madeira",
-    "pergunta": [
-      "como faço uma pá?",
-      "qual a receita para shovel?"
-    ],
-    "resposta_ref": "Para fazer uma pá de madeira, coloque 1 graveto na segunda linha, 1 graveto na terceira linha e uma tábua na primeira linha da coluna central. A pá é útil para cavar terra, areia e cascalho de forma mais eficiente.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Ferramentas de madeira",
-        "descricao": "Detalhes sobre a pá e seu arranjo vertical."
-      }
-    ]
-  },
-  {
-    "id": "enxada_madeira",
-    "pergunta": [
-      "como faço uma enxada?",
-      "como craftar hoe?"
-    ],
-    "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Ferramentas de madeira",
-        "descricao": "Passo a passo para montar a enxada."
-      }
-    ]
+    "answer_ref": "To make torches: 1 coal (regular OR charcoal) above 1 stick → yields 4 torches. Place torches to prevent spawn in dark areas."
   },
   {
     "id": "graveto",
-    "pergunta": [
-      "como faço gravetos?",
-      "como craftar stick?"
+    "question": [
+      "how to make stick",
+      "what is the recipe for stick",
+      "how to craft sticks",
+      "how to get sticks"
     ],
-    "resposta_ref": "Gravetos (sticks) são produzidos combinando duas tábuas de madeira na vertical, resultando em quatro gravetos. Eles servem de cabo para ferramentas, armas, tochas e muito mais.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Guia rápido de crafting básico",
-        "descricao": "Introduz a conversão de troncos em tábuas e gravetos."
-      }
-    ]
+    "answer_ref": "Stick: place 1 plank ON TOP of 1 plank in the grid (column) → 4 sticks."
   },
   {
-    "id": "tábuas",
-    "pergunta": [
-      "como obter tábuas?",
-      "como se faz plank?"
+    "id": "tábua",
+    "question": [
+      "how to make planks",
+      "how to turn log into planks",
+      "what is the recipe for planks",
+      "how to turn wood into planks"
     ],
-    "resposta_ref": "Tábuas de madeira são obtidas ao colocar um tronco (log) no quadrado de 2×2 do inventário ou na mesa de trabalho; cada tronco rende quatro tábuas. Elas são base para muitos outros itens.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Guia rápido de crafting básico",
-        "descricao": "Contexto sobre transformação de troncos em tábuas."
-      }
-    ]
+    "answer_ref": "In the inventory (2×2) or crafting table: each log turns into 4 planks."
   },
   {
-    "id": "mesa_trabalho",
-    "pergunta": [
-      "como faço uma mesa de trabalho?",
-      "como craftar crafting table?"
+    "id": "bancada",
+    "question": [
+      "how to make crafting table",
+      "what is the recipe for crafting table",
+      "how to craft crafting table",
+      "how to make 3x3 table"
     ],
-    "resposta_ref": "A mesa de trabalho (crafting table) se faz com quatro tábuas de madeira dispostas em um quadrado 2×2. Ao colocar a mesa no chão e clicar com o botão direito, você obtém uma grade 3×3 para criar receitas mais complexas.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Blocos utilitários",
-        "descricao": "Explica a função da mesa de trabalho e sua receita."
-      }
-    ]
+    "answer_ref": "Crafting table: combine 4 planks in a 2×2 square."
   },
   {
     "id": "fornalha",
-    "pergunta": [
-      "como faço uma fornalha?",
-      "qual a receita de furnace?"
+    "question": [
+      "how to make furnace",
+      "what is the recipe for furnace",
+      "how to craft furnace",
+      "how to cook food without campfire"
     ],
-    "resposta_ref": "A fornalha é criada posicionando oito blocos de pedra ou pedregulho ao redor da grade de 3×3, deixando o centro vazio. Ela permite cozinhar alimentos e fundir minérios.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Blocos utilitários",
-        "descricao": "Trecho sobre a receita da fornalha e seus usos."
-      }
-    ]
+    "answer_ref": "Furnace: 8 cobblestones around the 3×3 grid leaving the center empty."
   },
   {
-    "id": "bau",
-    "pergunta": [
-      "como faço um baú?",
-      "como craftar chest?"
+    "id": "carvão_vegetal",
+    "question": [
+      "how to make charcoal",
+      "I don't have coal",
+      "how to get charcoal",
+      "can you make charcoal without mine"
     ],
-    "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Blocos utilitários",
-        "descricao": "Descreve a montagem do baú e sua finalidade."
-      }
-    ]
+    "answer_ref": "Place LOGS on top of the furnace and a fuel below (logs, planks, sticks, coal). The result is CHARCOAL."
   },
   {
-    "id": "tocha",
-    "pergunta": [
-      "como faço tochas?",
-      "como craftar torch?"
+    "id": "cama",
+    "question": [
+      "how to make bed",
+      "what is the recipe for bed",
+      "how to craft bed",
+      "how to skip the night"
     ],
-    "resposta_ref": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Iluminação e movimento",
-        "descricao": "Trecho que trata da receita e utilidade das tochas."
-      }
-    ]
+    "answer_ref": "Bed: middle row with 3 wools + bottom row with 3 planks. Sleeping skips the night and sets respawn point."
+  },
+  {
+    "id": "picareta_madeira",
+    "question": [
+      "how to make wooden pickaxe",
+      "what is the recipe for wooden pickaxe",
+      "how to craft wooden pickaxe"
+    ],
+    "answer_ref": "3 planks in the top row + 2 sticks in the central column (middle and bottom)."
+  },
+  {
+    "id": "picareta_pedra",
+    "question": [
+      "how to make stone pickaxe",
+      "what is the recipe for stone pickaxe",
+      "how to craft stone pickaxe"
+    ],
+    "answer_ref": "3 cobblestones in the top row + 2 sticks in the central column."
+  },
+  {
+    "id": "machado_pedra",
+    "question": [
+      "how to make stone axe",
+      "what is the recipe for stone axe",
+      "how to craft stone axe"
+    ],
+    "answer_ref": "3 cobblestones forming an 'L' in the upper left corner + 2 sticks in the central column."
+  },
+  {
+    "id": "pá_pedra",
+    "question": [
+      "how to make stone shovel",
+      "what is the recipe for stone shovel",
+      "how to craft stone shovel"
+    ],
+    "answer_ref": "1 cobblestone on top of the central column + 2 sticks below."
+  },
+  {
+    "id": "espada_pedra",
+    "question": [
+      "how to make stone sword",
+      "what is the recipe for stone sword",
+      "how to craft stone sword"
+    ],
+    "answer_ref": "2 cobblestones in a column + 1 stick below."
+  },
+  {
+    "id": "baú",
+    "question": [
+      "how to make chest",
+      "what is the recipe for chest",
+      "how to craft chest"
+    ],
+    "answer_ref": "8 planks around the 3×3 grid leaving the center empty."
+  },
+  {
+    "id": "porta_madeira",
+    "question": [
+      "how to make wooden door",
+      "what is the recipe for door",
+      "how to craft wooden door"
+    ],
+    "answer_ref": "6 planks arranged in two columns of 3 (side by side)."
   },
   {
     "id": "escada",
-    "pergunta": [
-      "como faço escadas?",
-      "qual a receita de ladder?"
+    "question": [
+      "how to make ladder",
+      "what is the recipe for ladder",
+      "how to craft ladder"
     ],
-    "resposta_ref": "Escadas são criadas com sete gravetos dispostos em forma de ‘H’: três gravetos na coluna esquerda, três na coluna direita e um no centro da linha do meio. Três escadas são geradas e permitem subir verticalmente.",
-    "fontes": ["Minecraft crafting guide"],
-    "trechos": [
-      {
-        "doc": "crafting_basics.md",
-        "secao": "Iluminação e movimento",
-        "descricao": "Descreve a receita das escadas e seu uso para mobilidade."
-      }
-    ]
+    "answer_ref": "7 sticks in the shape of an 'H' in the 3×3 grid."
   },
   {
-    "id": "vida_fome",
-    "pergunta": [
-      "como funcionam a vida e a fome?",
-      "qual a mecânica de health hunger?"
+    "id": "iscar_fogueira",
+    "question": [
+      "how to light without torch",
+      "can you cook without furnace",
+      "how to craft campfire"
     ],
-    "resposta_ref": "No Minecraft, a barra de vida exibe dez corações, cada um valendo dois pontos, totalizando 20 pontos de vida. Dano reduz esses pontos; com fome cheia, a vida se regenera. A barra de fome possui dez ícones de coxa de frango; cada metade representa um ponto de fome. A fome diminui quando você corre, minera ou luta e aumenta ao comer alimentos. Quando a fome está acima de 18, ocorre regeneração de vida; abaixo de 6 você não pode correr; se chegar a zero, a vida começa a diminuir.",
-    "fontes": ["Simple Guide to Minecraft"],
-    "trechos": [
-      {
-        "doc": "survival_basics.md",
-        "secao": "Sobrevivência inicial",
-        "descricao": "Explica a relação entre fome, regeneração e segurança."
-      }
-    ]
+    "answer_ref": "Campfire: 3 logs in the bottom row, 1 coal in the center, 3 sticks forming a '^' above. (Recipe may vary by version/edition)."
+  },
+  {
+    "id": "escudo",
+    "question": [
+      "how to make shield",
+      "what is the recipe for shield",
+      "how to craft shield"
+    ],
+    "answer_ref": "Shield: 6 planks in an inverted 'Y' + 1 iron on top (Java). Protects against arrows and frontal attacks."
+  },
+  {
+    "id": "balde",
+    "question": [
+      "how to make bucket",
+      "what is the recipe for bucket",
+      "how to craft bucket"
+    ],
+    "answer_ref": "Bucket: 3 irons forming a 'V'. Useful for water/lava and safe mining."
+  },
+  {
+    "id": "tesoura",
+    "question": [
+      "how to make shears",
+      "what is the recipe for shears",
+      "how to craft shears"
+    ],
+    "answer_ref": "Shears: 2 irons diagonally. Allows collecting wool without killing the sheep."
+  },
+  {
+    "id": "carvao_vs_carvao_vegetal",
+    "question": [
+      "what is the difference between coal and charcoal",
+      "are coal and charcoal the same",
+      "can I use charcoal for torch"
+    ],
+    "answer_ref": "Coal comes from ore; charcoal is obtained in the furnace by burning logs. Both are used for torches and fuel."
+  },
+  {
+    "id": "comida_inicial",
+    "question": [
+      "easy food at the beginning",
+      "what to eat on the first day",
+      "how to recover hunger quickly at the beginning"
+    ],
+    "answer_ref": "Cook meats (cow/pig/sheep) in the furnace; apples from oak leaves. Cooked food gives more saturation than raw."
+  },
+  {
+    "id": "luz_e_spawn",
+    "question": [
+      "do torches prevent spawn",
+      "how to prevent monsters from spawning",
+      "what is the minimum light to prevent mobs from spawning"
+    ],
+    "answer_ref": "Torches increase the light level and prevent monsters from spawning in lit areas. Light up inside and outside the shelter."
+  },
+  {
+    "id": "nunca_cavar_reto",
+    "question": [
+      "why not dig straight down",
+      "is it dangerous to dig straight down",
+      "how to mine safely"
+    ],
+    "answer_ref": "Digging straight down can drop you into lava/holes. Use stairs or dig alternating 2 blocks."
+  },
+  {
+    "id": "ponto_respawn",
+    "question": [
+      "how to set respawn point",
+      "how to change spawn",
+      "does sleeping change spawn"
+    ],
+    "answer_ref": "Sleeping in a bed sets the respawn point (last bed used)."
   }
 ]

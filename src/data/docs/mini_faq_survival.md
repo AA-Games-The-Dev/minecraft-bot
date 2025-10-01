@@ -1,23 +1,22 @@
-# Mini‑FAQ para o Bot (perguntas curtinhas → respostas diretas)
+# Mini‑FAQ for the Bot (short questions → direct answers)
 
-**Como pego madeira?**  
-Chegue no tronco e segure **botão esquerdo** até quebrar; pegue o item no chão.
+**How do I get wood?**
+Stand next to a tree log and **hold left click** until it breaks; pick up the item.
 
-**Como abro a bancada?**  
-Coloque no chão e use **botão direito**.
+**How do I open the crafting table?**
+Place it on the ground and **right‑click**.
 
-**Como faço gravetos?**  
-1 tábua **em cima** de 1 tábua → 4 gravetos.
+**How do I make sticks?**
+1 plank **above** 1 plank → 4 sticks.
 
-**Não tenho carvão mineral!**  
-Faça **carvão vegetal**: cozinhe troncos na **fornalha** (combustível embaixo).
+**I have no coal!**
+Make **charcoal**: smelt logs in the **furnace** (fuel below).
 
-**Não consigo correr!**  
-Coma até encher a **fome** (> 6 pontos).
+**I can’t sprint!**
+Eat until **hunger** is above 6 points.
 
-**Me perco fácil. Dicas?**  
-Totens de terra com **tocha** no topo + anote **coordenadas** (F3 no Java).
+**I get lost easily. Tips?**
+Dirt **totems** with a **torch** on top + write down **coordinates** (F3 on Java).
 
-**Morri. E agora?**  
-Volta no **ponto de spawn** (última cama usada). Pegue seus itens onde morreu **antes de sumirem** (alguns min).
-
+**I died. Now what?**
+Return to your **spawn point** (last bed used). Grab your items where you died **before they despawn** (a few minutes).

@@ -1,269 +1,1186 @@
 {
   "metrics": {
-    "precision_at_1": 0.7692307692307693,
-    "precision_at_3": 1,
-    "recall_at_1": 0.7692307692307693,
-    "recall_at_3": 1,
-    "groundedness": 0.9871794871794872
+    "precision_at_1": 0.8333333333333334,
+    "precision_at_3": 0.9166666666666666,
+    "recall_at_1": 0.8333333333333334,
+    "recall_at_3": 0.9166666666666666,
+    "groundedness": 0.31200396825396826
   },
   "results": [
     {
-      "query": "como fazer uma picareta de madeira?",
+      "query": "como fazer tocha",
       "top3": [
         {
-          "id": "picareta_madeira",
-          "score": 0.18181818181818182,
-          "resposta_ref": "Para fazer uma picareta de madeira, transforme um tronco em tábuas, faça dois gravetos e, na mesa de trabalho 3×3, coloque 3 tábuas na linha superior e 2 gravetos na coluna central. Essa ferramenta é usada para minerar pedra e minérios básicos."
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.7296640174652078,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
         },
         {
-          "id": "pá_madeira",
-          "score": 0.16129032258064516,
-          "resposta_ref": "Para fazer uma pá de madeira, coloque 1 graveto na segunda linha, 1 graveto na terceira linha e uma tábua na primeira linha da coluna central. A pá é útil para cavar terra, areia e cascalho de forma mais eficiente."
+          "id": "doc:survival_basics.md#11",
+          "sourceId": "survival_basics.md#11",
+          "type": "doc",
+          "score": 0.5576457379049989,
+          "text": "- [ ] 8–12 comidas cozidas na mochila. - [ ] Mineração segura iniciada (escadinha e tochas). ---\r\n\r\n## 8) Perguntas Frequentes (para RAG responder rápido)\r\n**Como pego madeira se não tenho nada?**  \r\nChegue no tronco e **segure o botão esquerdo** até quebrar; pegue o item no chão. Transforme o **tronco** em **tábuas** pelo inventário (E). **Como coloco a bancada?**  \r\nSelecione-a na hotbar e use **botão direito** no chão. **Como faço tochas sem carvão mineral?**  \r\nCozinhe **troncos** na **fornalha** para fazer **carvão vegetal**. Receita da tocha: **1 carvão + 1 graveto**.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 11
+          }
         },
         {
-          "id": "espada_madeira",
-          "score": 0.13793103448275862,
-          "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se."
+          "id": "doc:mini_faq_survival.md#0",
+          "sourceId": "mini_faq_survival.md#0",
+          "type": "doc",
+          "score": 0.5274003578971971,
+          "text": "# Mini‑FAQ para o Bot (perguntas curtinhas → respostas diretas)\r\n\r\n**Como pego madeira?**  \r\nChegue no tronco e segure **botão esquerdo** até quebrar; pegue o item no chão. **Como abro a bancada?**  \r\nColoque no chão e use **botão direito**. **Como faço gravetos?**  \r\n1 tábua **em cima** de 1 tábua → 4 gravetos. **Não tenho carvão mineral!**  \r\nFaça **carvão vegetal**: cozinhe troncos na **fornalha** (combustível embaixo). **Não consigo correr!**  \r\nComa até encher a **fome** (> 6 pontos). **Me perco fácil. Dicas?**  \r\nTotens de terra com **tocha** no topo + anote **coordenadas** (F3 no Java).",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "mini_faq_survival.md",
+            "chunk": 0
+          }
         }
       ]
     },
     {
-      "query": "como faço um machado de madeira?",
+      "query": "como fazer graveto",
       "top3": [
         {
-          "id": "bau",
-          "score": 0.19230769230769232,
-          "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos."
+          "id": "faq:graveto",
+          "sourceId": "graveto",
+          "type": "faq",
+          "score": 0.6338720781307522,
+          "text": "Graveto (stick): coloque 1 tábua EM CIMA de 1 tábua na grade (coluna) → 4 gravetos.",
+          "resposta_ref": "Graveto (stick): coloque 1 tábua EM CIMA de 1 tábua na grade (coluna) → 4 gravetos.",
+          "metadata": {
+            "perguntas": [
+              "como fazer graveto",
+              "qual a receita de graveto",
+              "como craftar sticks",
+              "como consigo sticks"
+            ]
+          }
         },
         {
-          "id": "machado_madeira",
-          "score": 0.17647058823529413,
-          "resposta_ref": "Para criar um machado de madeira, produza tábuas a partir de um tronco, crie dois gravetos e, em seguida, coloque 3 tábuas em ‘L’ no canto superior esquerdo da grade 3×3 e 2 gravetos na coluna central. O machado corta madeira e objetos de madeira mais rápido."
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.5669463607990296,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
         },
         {
-          "id": "tocha",
-          "score": 0.16,
-          "resposta_ref": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve."
+          "id": "doc:mini_faq_survival.md#0",
+          "sourceId": "mini_faq_survival.md#0",
+          "type": "doc",
+          "score": 0.5364465929189585,
+          "text": "# Mini‑FAQ para o Bot (perguntas curtinhas → respostas diretas)\r\n\r\n**Como pego madeira?**  \r\nChegue no tronco e segure **botão esquerdo** até quebrar; pegue o item no chão. **Como abro a bancada?**  \r\nColoque no chão e use **botão direito**. **Como faço gravetos?**  \r\n1 tábua **em cima** de 1 tábua → 4 gravetos. **Não tenho carvão mineral!**  \r\nFaça **carvão vegetal**: cozinhe troncos na **fornalha** (combustível embaixo). **Não consigo correr!**  \r\nComa até encher a **fome** (> 6 pontos). **Me perco fácil. Dicas?**  \r\nTotens de terra com **tocha** no topo + anote **coordenadas** (F3 no Java).",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "mini_faq_survival.md",
+            "chunk": 0
+          }
         }
       ]
     },
     {
-      "query": "como faço uma espada?",
+      "query": "como fazer tábuas",
       "top3": [
         {
-          "id": "espada_madeira",
-          "score": 0.14814814814814814,
-          "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se."
+          "id": "faq:tábua",
+          "sourceId": "tábua",
+          "type": "faq",
+          "score": 0.6883849927635378,
+          "text": "No inventário (2×2) ou bancada: cada 1 tronco vira 4 tábuas (planks).",
+          "resposta_ref": "No inventário (2×2) ou bancada: cada 1 tronco vira 4 tábuas (planks).",
+          "metadata": {
+            "perguntas": [
+              "como fazer tábuas",
+              "como transformar tronco em tábua",
+              "qual a receita de planks",
+              "como virar madeira em tábua"
+            ]
+          }
         },
         {
-          "id": "enxada_madeira",
-          "score": 0.10714285714285714,
-          "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio."
+          "id": "faq:baú",
+          "sourceId": "baú",
+          "type": "faq",
+          "score": 0.6221769928756455,
+          "text": "8 tábuas ao redor da grade 3×3 deixando o centro vazio.",
+          "resposta_ref": "8 tábuas ao redor da grade 3×3 deixando o centro vazio.",
+          "metadata": {
+            "perguntas": [
+              "como fazer baú",
+              "qual a receita do baú",
+              "como craftar chest"
+            ]
+          }
         },
         {
-          "id": "fornalha",
-          "score": 0.10344827586206896,
-          "resposta_ref": "A fornalha é criada posicionando oito blocos de pedra ou pedregulho ao redor da grade de 3×3, deixando o centro vazio. Ela permite cozinhar alimentos e fundir minérios."
+          "id": "doc:crafting_basics.md#0",
+          "sourceId": "crafting_basics.md#0",
+          "type": "doc",
+          "score": 0.6192038819316927,
+          "text": "# Guia rápido de crafting básico\r\n\r\nA primeira etapa em um novo mundo é coletar madeira. Quebre troncos com as mãos e transforme-os em tábuas. A partir das tábuas é possível produzir uma mesa de trabalho e gravetos, itens essenciais para todas as receitas iniciais. ## Ferramentas de madeira\r\n\r\n* **Picareta:** combine três tábuas na linha superior da mesa 3×3 e posicione dois gravetos na coluna central. É a ferramenta necessária para minerar pedra e liberar receitas melhores. * **Machado:** coloque três tábuas formando um \"L\" no canto superior esquerdo e dois gravetos na coluna central.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "crafting_basics.md",
+            "chunk": 0
+          }
         }
       ]
     },
     {
-      "query": "como faço uma pá?",
+      "query": "como fazer bancada de trabalho",
       "top3": [
         {
-          "id": "pá_madeira",
-          "score": 0.13333333333333333,
-          "resposta_ref": "Para fazer uma pá de madeira, coloque 1 graveto na segunda linha, 1 graveto na terceira linha e uma tábua na primeira linha da coluna central. A pá é útil para cavar terra, areia e cascalho de forma mais eficiente."
+          "id": "doc:survival_basics.md#3",
+          "sourceId": "survival_basics.md#3",
+          "type": "doc",
+          "score": 0.538092386078029,
+          "text": "**Faça uma Bancada de Trabalho (Crafting Table):** coloque **4 tábuas** em quadrado 2×2 → pegue a **Bancada**. 4. **Coloque a Bancada no chão:** selecione a bancada na hotbar e **botão direito** no chão. 5. **Faça Gravetos (Sticks):** na bancada ou no 2×2, use **1 tábua sobre 1 tábua** (em coluna). Saem **4 gravetos** por receita. Faça **8–12 gravetos**. > Por que segurar para quebrar? Blocos exigem tempo de “mina” (mineração). O punho quebra madeira devagar; ferramentas certas quebram mais rápido. ---\r\n\r\n## 2) Ferramentas de madeira → de pedra (min 5–12)\r\n1.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 3
+          }
         },
         {
-          "id": "espada_madeira",
-          "score": 0.10714285714285714,
-          "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se."
+          "id": "faq:comida_inicial",
+          "sourceId": "comida_inicial",
+          "type": "faq",
+          "score": 0.5055625638486373,
+          "text": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "resposta_ref": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "metadata": {
+            "perguntas": [
+              "comida fácil no começo",
+              "o que comer no primeiro dia",
+              "como recuperar fome rápido no início"
+            ]
+          }
         },
         {
-          "id": "enxada_madeira",
-          "score": 0.10714285714285714,
-          "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio."
+          "id": "faq:bancada",
+          "sourceId": "bancada",
+          "type": "faq",
+          "score": 0.4957818044116652,
+          "text": "Bancada (crafting table): combine 4 tábuas em um quadrado 2×2.",
+          "resposta_ref": "Bancada (crafting table): combine 4 tábuas em um quadrado 2×2.",
+          "metadata": {
+            "perguntas": [
+              "como fazer bancada de trabalho",
+              "qual é a receita da mesa de trabalho",
+              "como craftar crafting table",
+              "como fazer mesa 3x3"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como faço uma enxada?",
+      "query": "como fazer fornalha",
       "top3": [
         {
-          "id": "enxada_madeira",
-          "score": 0.14814814814814814,
-          "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio."
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.621724713895508,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
         },
         {
-          "id": "espada_madeira",
-          "score": 0.10714285714285714,
-          "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se."
+          "id": "faq:comida_inicial",
+          "sourceId": "comida_inicial",
+          "type": "faq",
+          "score": 0.5819286615169188,
+          "text": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "resposta_ref": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "metadata": {
+            "perguntas": [
+              "comida fácil no começo",
+              "o que comer no primeiro dia",
+              "como recuperar fome rápido no início"
+            ]
+          }
         },
         {
-          "id": "fornalha",
-          "score": 0.10344827586206896,
-          "resposta_ref": "A fornalha é criada posicionando oito blocos de pedra ou pedregulho ao redor da grade de 3×3, deixando o centro vazio. Ela permite cozinhar alimentos e fundir minérios."
+          "id": "faq:fornalha",
+          "sourceId": "fornalha",
+          "type": "faq",
+          "score": 0.5708024156141287,
+          "text": "Fornalha (furnace): 8 pedras (cobblestone) ao redor da grade 3×3 deixando o centro vazio.",
+          "resposta_ref": "Fornalha (furnace): 8 pedras (cobblestone) ao redor da grade 3×3 deixando o centro vazio.",
+          "metadata": {
+            "perguntas": [
+              "como fazer fornalha",
+              "qual a receita da fornalha",
+              "como craftar furnace",
+              "como cozinhar comida sem fogueira"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como faço gravetos?",
+      "query": "como fazer carvão vegetal",
       "top3": [
         {
-          "id": "enxada_madeira",
-          "score": 0.1111111111111111,
-          "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio."
+          "id": "faq:carvão_vegetal",
+          "sourceId": "carvão_vegetal",
+          "type": "faq",
+          "score": 0.6950603899764416,
+          "text": "Coloque TRONCOS na parte de cima da fornalha e um combustível embaixo (troncos, tábuas, gravetos, carvão). O resultado é CARVÃO VEGETAL (charcoal).",
+          "resposta_ref": "Coloque TRONCOS na parte de cima da fornalha e um combustível embaixo (troncos, tábuas, gravetos, carvão). O resultado é CARVÃO VEGETAL (charcoal).",
+          "metadata": {
+            "perguntas": [
+              "como fazer carvão vegetal",
+              "não tenho carvão mineral",
+              "como conseguir charcoal",
+              "dá para fazer carvão sem mina"
+            ]
+          }
         },
         {
-          "id": "graveto",
-          "score": 0.1111111111111111,
-          "resposta_ref": "Gravetos (sticks) são produzidos combinando duas tábuas de madeira na vertical, resultando em quatro gravetos. Eles servem de cabo para ferramentas, armas, tochas e muito mais."
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.674094151461682,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
         },
         {
-          "id": "escada",
-          "score": 0.0967741935483871,
-          "resposta_ref": "Escadas são criadas com sete gravetos dispostos em forma de ‘H’: três gravetos na coluna esquerda, três na coluna direita e um no centro da linha do meio. Três escadas são geradas e permitem subir verticalmente."
+          "id": "faq:carvao_vs_carvao_vegetal",
+          "sourceId": "carvao_vs_carvao_vegetal",
+          "type": "faq",
+          "score": 0.6486634716246744,
+          "text": "Carvão (mineral) vem do minério; carvão vegetal (charcoal) é obtido na fornalha queimando troncos. Ambos servem para tochas e combustível.",
+          "resposta_ref": "Carvão (mineral) vem do minério; carvão vegetal (charcoal) é obtido na fornalha queimando troncos. Ambos servem para tochas e combustível.",
+          "metadata": {
+            "perguntas": [
+              "qual a diferença entre carvão e carvão vegetal",
+              "carvão e charcoal são iguais",
+              "posso usar carvão vegetal para tocha"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como obter tábuas?",
+      "query": "como fazer cama",
       "top3": [
         {
-          "id": "tábuas",
-          "score": 0.09375,
-          "resposta_ref": "Tábuas de madeira são obtidas ao colocar um tronco (log) no quadrado de 2×2 do inventário ou na mesa de trabalho; cada tronco rende quatro tábuas. Elas são base para muitos outros itens."
+          "id": "faq:cama",
+          "sourceId": "cama",
+          "type": "faq",
+          "score": 0.6431333627648214,
+          "text": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "resposta_ref": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "metadata": {
+            "perguntas": [
+              "como fazer cama",
+              "qual é a receita da cama",
+              "como craftar bed",
+              "como pular a noite"
+            ]
+          }
         },
         {
-          "id": "bau",
-          "score": 0.07692307692307693,
-          "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos."
+          "id": "faq:baú",
+          "sourceId": "baú",
+          "type": "faq",
+          "score": 0.5479238967996829,
+          "text": "8 tábuas ao redor da grade 3×3 deixando o centro vazio.",
+          "resposta_ref": "8 tábuas ao redor da grade 3×3 deixando o centro vazio.",
+          "metadata": {
+            "perguntas": [
+              "como fazer baú",
+              "qual a receita do baú",
+              "como craftar chest"
+            ]
+          }
         },
         {
-          "id": "espada_madeira",
-          "score": 0.07142857142857142,
-          "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se."
+          "id": "faq:comida_inicial",
+          "sourceId": "comida_inicial",
+          "type": "faq",
+          "score": 0.5433816107291313,
+          "text": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "resposta_ref": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "metadata": {
+            "perguntas": [
+              "comida fácil no começo",
+              "o que comer no primeiro dia",
+              "como recuperar fome rápido no início"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como faço uma mesa de trabalho?",
+      "query": "como fazer picareta de madeira",
       "top3": [
         {
-          "id": "espada_madeira",
-          "score": 0.2222222222222222,
-          "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se."
+          "id": "faq:picareta_madeira",
+          "sourceId": "picareta_madeira",
+          "type": "faq",
+          "score": 0.7428489334789156,
+          "text": "3 tábuas na linha de cima + 2 gravetos na coluna central (centro e baixo).",
+          "resposta_ref": "3 tábuas na linha de cima + 2 gravetos na coluna central (centro e baixo).",
+          "metadata": {
+            "perguntas": [
+              "como fazer picareta de madeira",
+              "qual é a receita da picareta de madeira",
+              "como craftar wooden pickaxe"
+            ]
+          }
         },
         {
-          "id": "picareta_madeira",
-          "score": 0.18181818181818182,
-          "resposta_ref": "Para fazer uma picareta de madeira, transforme um tronco em tábuas, faça dois gravetos e, na mesa de trabalho 3×3, coloque 3 tábuas na linha superior e 2 gravetos na coluna central. Essa ferramenta é usada para minerar pedra e minérios básicos."
+          "id": "doc:survival_basics.md#4",
+          "sourceId": "survival_basics.md#4",
+          "type": "doc",
+          "score": 0.6625886958617266,
+          "text": "**Picareta de madeira (temporária):** na bancada 3×3:  \r\n   - Linha de cima: **3 tábuas**  \r\n   - Coluna do meio: **2 gravetos** (centro e baixo)  \r\n   → Faça **1 picareta de madeira**. 2. **Ache pedra (Cobblestone):** procure encostas/cavidades visíveis. **Nunca cave para baixo em linha reta.**\r\n3. **Minere 20 pedras** com a picareta de madeira. 4. **Faça ferramentas de pedra (melhores):**\r\n   - **Picareta de pedra:** 3 pedras em cima + 2 gravetos no meio. - **Machado de pedra:** 3 pedras em “L” (duas em cima, uma à esquerda do meio) + 2 gravetos.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 4
+          }
         },
         {
-          "id": "mesa_trabalho",
-          "score": 0.17647058823529413,
-          "resposta_ref": "A mesa de trabalho (crafting table) se faz com quatro tábuas de madeira dispostas em um quadrado 2×2. Ao colocar a mesa no chão e clicar com o botão direito, você obtém uma grade 3×3 para criar receitas mais complexas."
+          "id": "doc:crafting_basics.md#0",
+          "sourceId": "crafting_basics.md#0",
+          "type": "doc",
+          "score": 0.6355885808780314,
+          "text": "# Guia rápido de crafting básico\r\n\r\nA primeira etapa em um novo mundo é coletar madeira. Quebre troncos com as mãos e transforme-os em tábuas. A partir das tábuas é possível produzir uma mesa de trabalho e gravetos, itens essenciais para todas as receitas iniciais. ## Ferramentas de madeira\r\n\r\n* **Picareta:** combine três tábuas na linha superior da mesa 3×3 e posicione dois gravetos na coluna central. É a ferramenta necessária para minerar pedra e liberar receitas melhores. * **Machado:** coloque três tábuas formando um \"L\" no canto superior esquerdo e dois gravetos na coluna central.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "crafting_basics.md",
+            "chunk": 0
+          }
         }
       ]
     },
     {
-      "query": "como faço uma fornalha?",
+      "query": "como fazer picareta de pedra",
       "top3": [
         {
-          "id": "fornalha",
-          "score": 0.14285714285714285,
-          "resposta_ref": "A fornalha é criada posicionando oito blocos de pedra ou pedregulho ao redor da grade de 3×3, deixando o centro vazio. Ela permite cozinhar alimentos e fundir minérios."
+          "id": "faq:picareta_pedra",
+          "sourceId": "picareta_pedra",
+          "type": "faq",
+          "score": 0.7014152117667432,
+          "text": "3 pedras (cobblestone) na linha de cima + 2 gravetos na coluna central.",
+          "resposta_ref": "3 pedras (cobblestone) na linha de cima + 2 gravetos na coluna central.",
+          "metadata": {
+            "perguntas": [
+              "como fazer picareta de pedra",
+              "qual é a receita da picareta de pedra",
+              "como craftar stone pickaxe"
+            ]
+          }
         },
         {
-          "id": "espada_madeira",
-          "score": 0.10714285714285714,
-          "resposta_ref": "Uma espada de madeira é feita com 1 graveto e 2 tábuas de madeira. Coloque as 2 tábuas em uma coluna e o graveto abaixo delas na mesa de trabalho. A espada é usada para atacar mobs e defender‑se."
+          "id": "doc:crafting_basics_ext.md#1",
+          "sourceId": "crafting_basics_ext.md#1",
+          "type": "doc",
+          "score": 0.6596042024189391,
+          "text": "## Ferramentas de pedra (substituem madeira rapidamente)\n- **Picareta:** 3 pedras em cima + 2 gravetos no meio.\n- **Machado:** 3 pedras em 'L' + 2 gravetos na coluna central.\n- **Pá:** 1 pedra no topo + 2 gravetos na coluna central.\n- **Espada:** 2 pedras em coluna + 1 graveto abaixo.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "crafting_basics_ext.md",
+            "chunk": 1
+          }
         },
         {
-          "id": "enxada_madeira",
-          "score": 0.10714285714285714,
-          "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio."
+          "id": "faq:espada_pedra",
+          "sourceId": "espada_pedra",
+          "type": "faq",
+          "score": 0.6159662919795209,
+          "text": "2 pedras em coluna + 1 graveto abaixo.",
+          "resposta_ref": "2 pedras em coluna + 1 graveto abaixo.",
+          "metadata": {
+            "perguntas": [
+              "como fazer espada de pedra",
+              "qual receita de espada de pedra",
+              "como craftar stone sword"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como faço um baú?",
+      "query": "como fazer machado de pedra",
       "top3": [
         {
-          "id": "bau",
-          "score": 0.16,
-          "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos."
+          "id": "faq:machado_pedra",
+          "sourceId": "machado_pedra",
+          "type": "faq",
+          "score": 0.6737944071281969,
+          "text": "3 pedras formando um 'L' no canto superior esquerdo + 2 gravetos na coluna central.",
+          "resposta_ref": "3 pedras formando um 'L' no canto superior esquerdo + 2 gravetos na coluna central.",
+          "metadata": {
+            "perguntas": [
+              "como fazer machado de pedra",
+              "qual receita de machado de pedra",
+              "como craftar stone axe"
+            ]
+          }
         },
         {
-          "id": "tocha",
-          "score": 0.125,
-          "resposta_ref": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve."
+          "id": "faq:espada_pedra",
+          "sourceId": "espada_pedra",
+          "type": "faq",
+          "score": 0.6677695448074862,
+          "text": "2 pedras em coluna + 1 graveto abaixo.",
+          "resposta_ref": "2 pedras em coluna + 1 graveto abaixo.",
+          "metadata": {
+            "perguntas": [
+              "como fazer espada de pedra",
+              "qual receita de espada de pedra",
+              "como craftar stone sword"
+            ]
+          }
         },
         {
-          "id": "escada",
-          "score": 0.09375,
-          "resposta_ref": "Escadas são criadas com sete gravetos dispostos em forma de ‘H’: três gravetos na coluna esquerda, três na coluna direita e um no centro da linha do meio. Três escadas são geradas e permitem subir verticalmente."
+          "id": "faq:pá_pedra",
+          "sourceId": "pá_pedra",
+          "type": "faq",
+          "score": 0.6020989610984809,
+          "text": "1 pedra no topo da coluna central + 2 gravetos abaixo.",
+          "resposta_ref": "1 pedra no topo da coluna central + 2 gravetos abaixo.",
+          "metadata": {
+            "perguntas": [
+              "como fazer pá de pedra",
+              "qual receita de pá de pedra",
+              "como craftar stone shovel"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como faço tochas?",
+      "query": "como fazer pá de pedra",
       "top3": [
         {
-          "id": "tocha",
-          "score": 0.13043478260869565,
-          "resposta_ref": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve."
+          "id": "faq:pá_pedra",
+          "sourceId": "pá_pedra",
+          "type": "faq",
+          "score": 0.6518233356440344,
+          "text": "1 pedra no topo da coluna central + 2 gravetos abaixo.",
+          "resposta_ref": "1 pedra no topo da coluna central + 2 gravetos abaixo.",
+          "metadata": {
+            "perguntas": [
+              "como fazer pá de pedra",
+              "qual receita de pá de pedra",
+              "como craftar stone shovel"
+            ]
+          }
         },
         {
-          "id": "graveto",
-          "score": 0.1111111111111111,
-          "resposta_ref": "Gravetos (sticks) são produzidos combinando duas tábuas de madeira na vertical, resultando em quatro gravetos. Eles servem de cabo para ferramentas, armas, tochas e muito mais."
+          "id": "faq:espada_pedra",
+          "sourceId": "espada_pedra",
+          "type": "faq",
+          "score": 0.5884456853698871,
+          "text": "2 pedras em coluna + 1 graveto abaixo.",
+          "resposta_ref": "2 pedras em coluna + 1 graveto abaixo.",
+          "metadata": {
+            "perguntas": [
+              "como fazer espada de pedra",
+              "qual receita de espada de pedra",
+              "como craftar stone sword"
+            ]
+          }
         },
         {
-          "id": "bau",
-          "score": 0.07692307692307693,
-          "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos."
+          "id": "faq:picareta_pedra",
+          "sourceId": "picareta_pedra",
+          "type": "faq",
+          "score": 0.5873414168774176,
+          "text": "3 pedras (cobblestone) na linha de cima + 2 gravetos na coluna central.",
+          "resposta_ref": "3 pedras (cobblestone) na linha de cima + 2 gravetos na coluna central.",
+          "metadata": {
+            "perguntas": [
+              "como fazer picareta de pedra",
+              "qual é a receita da picareta de pedra",
+              "como craftar stone pickaxe"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como faço escadas?",
+      "query": "como fazer espada de pedra",
       "top3": [
         {
-          "id": "escada",
-          "score": 0.0967741935483871,
-          "resposta_ref": "Escadas são criadas com sete gravetos dispostos em forma de ‘H’: três gravetos na coluna esquerda, três na coluna direita e um no centro da linha do meio. Três escadas são geradas e permitem subir verticalmente."
+          "id": "faq:espada_pedra",
+          "sourceId": "espada_pedra",
+          "type": "faq",
+          "score": 0.7040025265099886,
+          "text": "2 pedras em coluna + 1 graveto abaixo.",
+          "resposta_ref": "2 pedras em coluna + 1 graveto abaixo.",
+          "metadata": {
+            "perguntas": [
+              "como fazer espada de pedra",
+              "qual receita de espada de pedra",
+              "como craftar stone sword"
+            ]
+          }
         },
         {
-          "id": "tocha",
-          "score": 0.08333333333333333,
-          "resposta_ref": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve."
+          "id": "faq:machado_pedra",
+          "sourceId": "machado_pedra",
+          "type": "faq",
+          "score": 0.647727370272278,
+          "text": "3 pedras formando um 'L' no canto superior esquerdo + 2 gravetos na coluna central.",
+          "resposta_ref": "3 pedras formando um 'L' no canto superior esquerdo + 2 gravetos na coluna central.",
+          "metadata": {
+            "perguntas": [
+              "como fazer machado de pedra",
+              "qual receita de machado de pedra",
+              "como craftar stone axe"
+            ]
+          }
         },
         {
-          "id": "bau",
-          "score": 0.07692307692307693,
-          "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos."
+          "id": "faq:picareta_pedra",
+          "sourceId": "picareta_pedra",
+          "type": "faq",
+          "score": 0.6190249550287825,
+          "text": "3 pedras (cobblestone) na linha de cima + 2 gravetos na coluna central.",
+          "resposta_ref": "3 pedras (cobblestone) na linha de cima + 2 gravetos na coluna central.",
+          "metadata": {
+            "perguntas": [
+              "como fazer picareta de pedra",
+              "qual é a receita da picareta de pedra",
+              "como craftar stone pickaxe"
+            ]
+          }
         }
       ]
     },
     {
-      "query": "como funcionam a vida e a fome?",
+      "query": "como fazer baú",
       "top3": [
         {
-          "id": "vida_fome",
-          "score": 0.06666666666666667,
-          "resposta_ref": "No Minecraft, a barra de vida exibe dez corações, cada um valendo dois pontos, totalizando 20 pontos de vida. Dano reduz esses pontos; com fome cheia, a vida se regenera. A barra de fome possui dez ícones de coxa de frango; cada metade representa um ponto de fome. A fome diminui quando você corre, minera ou luta e aumenta ao comer alimentos. Quando a fome está acima de 18, ocorre regeneração de vida; abaixo de 6 você não pode correr; se chegar a zero, a vida começa a diminuir."
+          "id": "faq:baú",
+          "sourceId": "baú",
+          "type": "faq",
+          "score": 0.5846421962975538,
+          "text": "8 tábuas ao redor da grade 3×3 deixando o centro vazio.",
+          "resposta_ref": "8 tábuas ao redor da grade 3×3 deixando o centro vazio.",
+          "metadata": {
+            "perguntas": [
+              "como fazer baú",
+              "qual a receita do baú",
+              "como craftar chest"
+            ]
+          }
         },
         {
-          "id": "tocha",
-          "score": 0.038461538461538464,
-          "resposta_ref": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve."
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.5455366624970914,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
         },
         {
-          "id": "bau",
-          "score": 0.03571428571428571,
-          "resposta_ref": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos."
+          "id": "faq:cama",
+          "sourceId": "cama",
+          "type": "faq",
+          "score": 0.5184923412550222,
+          "text": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "resposta_ref": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "metadata": {
+            "perguntas": [
+              "como fazer cama",
+              "qual é a receita da cama",
+              "como craftar bed",
+              "como pular a noite"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "como fazer porta de madeira",
+      "top3": [
+        {
+          "id": "faq:porta_madeira",
+          "sourceId": "porta_madeira",
+          "type": "faq",
+          "score": 0.6787997085857602,
+          "text": "6 tábuas dispostas em duas colunas de 3 (lado a lado).",
+          "resposta_ref": "6 tábuas dispostas em duas colunas de 3 (lado a lado).",
+          "metadata": {
+            "perguntas": [
+              "como fazer porta de madeira",
+              "qual receita de porta",
+              "como craftar wooden door"
+            ]
+          }
+        },
+        {
+          "id": "faq:picareta_madeira",
+          "sourceId": "picareta_madeira",
+          "type": "faq",
+          "score": 0.6615363192000335,
+          "text": "3 tábuas na linha de cima + 2 gravetos na coluna central (centro e baixo).",
+          "resposta_ref": "3 tábuas na linha de cima + 2 gravetos na coluna central (centro e baixo).",
+          "metadata": {
+            "perguntas": [
+              "como fazer picareta de madeira",
+              "qual é a receita da picareta de madeira",
+              "como craftar wooden pickaxe"
+            ]
+          }
+        },
+        {
+          "id": "doc:crafting_basics.md#0",
+          "sourceId": "crafting_basics.md#0",
+          "type": "doc",
+          "score": 0.6025817548779732,
+          "text": "# Guia rápido de crafting básico\r\n\r\nA primeira etapa em um novo mundo é coletar madeira. Quebre troncos com as mãos e transforme-os em tábuas. A partir das tábuas é possível produzir uma mesa de trabalho e gravetos, itens essenciais para todas as receitas iniciais. ## Ferramentas de madeira\r\n\r\n* **Picareta:** combine três tábuas na linha superior da mesa 3×3 e posicione dois gravetos na coluna central. É a ferramenta necessária para minerar pedra e liberar receitas melhores. * **Machado:** coloque três tábuas formando um \"L\" no canto superior esquerdo e dois gravetos na coluna central.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "crafting_basics.md",
+            "chunk": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "como fazer escada",
+      "top3": [
+        {
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.5578405985603627,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
+        },
+        {
+          "id": "faq:cama",
+          "sourceId": "cama",
+          "type": "faq",
+          "score": 0.5551564395469432,
+          "text": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "resposta_ref": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "metadata": {
+            "perguntas": [
+              "como fazer cama",
+              "qual é a receita da cama",
+              "como craftar bed",
+              "como pular a noite"
+            ]
+          }
+        },
+        {
+          "id": "doc:survival_basics.md#3",
+          "sourceId": "survival_basics.md#3",
+          "type": "doc",
+          "score": 0.5477785781879698,
+          "text": "**Faça uma Bancada de Trabalho (Crafting Table):** coloque **4 tábuas** em quadrado 2×2 → pegue a **Bancada**. 4. **Coloque a Bancada no chão:** selecione a bancada na hotbar e **botão direito** no chão. 5. **Faça Gravetos (Sticks):** na bancada ou no 2×2, use **1 tábua sobre 1 tábua** (em coluna). Saem **4 gravetos** por receita. Faça **8–12 gravetos**. > Por que segurar para quebrar? Blocos exigem tempo de “mina” (mineração). O punho quebra madeira devagar; ferramentas certas quebram mais rápido. ---\r\n\r\n## 2) Ferramentas de madeira → de pedra (min 5–12)\r\n1.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 3
+          }
+        }
+      ]
+    },
+    {
+      "query": "como acender luz sem tocha",
+      "top3": [
+        {
+          "id": "faq:iscar_fogueira",
+          "sourceId": "iscar_fogueira",
+          "type": "faq",
+          "score": 0.6236020831757354,
+          "text": "Fogueira (campfire): 3 troncos em linha de baixo, 1 carvão no centro, 3 gravetos formando um '^' acima. (Receita varia por versão/edição).",
+          "resposta_ref": "Fogueira (campfire): 3 troncos em linha de baixo, 1 carvão no centro, 3 gravetos formando um '^' acima. (Receita varia por versão/edição).",
+          "metadata": {
+            "perguntas": [
+              "como acender luz sem tocha",
+              "tem como cozinhar sem fornalha",
+              "como craftar fogueira campfire"
+            ]
+          }
+        },
+        {
+          "id": "doc:survival_basics.md#0",
+          "sourceId": "survival_basics.md#0",
+          "type": "doc",
+          "score": 0.5251455213119779,
+          "text": "# Guia de Sobrevivência Absoluta (0 conhecimento → primeiras 3 horas)\r\n\r\n> Objetivo: ensinar alguém *100% blind* a sair vivo do dia 1, montar abrigo, acender luz, fazer ferramentas e comida básica. Texto pensado para RAG: dividido em passos, perguntas frequentes e procedimentos curtos.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 0
+          }
+        },
+        {
+          "id": "doc:survival_basics.md#13",
+          "sourceId": "survival_basics.md#13",
+          "type": "doc",
+          "score": 0.5211946392352184,
+          "text": "**O que é “saturação”?**  \r\nValor oculto que define por quanto tempo você fica saciado. **Comidas melhores** (cozidas) aumentam mais a saturação. ---\r\n\r\n## 9) Micro‑procedimentos (RAG amigável)\r\n**P: “Quero acender luz agora e não achei carvão.”**  \r\n**R:** 1) Faça **fornalha** (8 pedras) → 2) coloque **troncos** em cima e **tábuas** embaixo → 3) pegue **carvão vegetal** → 4) craft **tocha** (carvão + graveto) → 5) ilumine **dentro e fora** do abrigo.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 13
+          }
+        }
+      ]
+    },
+    {
+      "query": "como fazer escudo",
+      "top3": [
+        {
+          "id": "faq:cama",
+          "sourceId": "cama",
+          "type": "faq",
+          "score": 0.5234998999706357,
+          "text": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "resposta_ref": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "metadata": {
+            "perguntas": [
+              "como fazer cama",
+              "qual é a receita da cama",
+              "como craftar bed",
+              "como pular a noite"
+            ]
+          }
+        },
+        {
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.5204720699344413,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
+        },
+        {
+          "id": "faq:comida_inicial",
+          "sourceId": "comida_inicial",
+          "type": "faq",
+          "score": 0.5190127727219742,
+          "text": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "resposta_ref": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "metadata": {
+            "perguntas": [
+              "comida fácil no começo",
+              "o que comer no primeiro dia",
+              "como recuperar fome rápido no início"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "como fazer balde",
+      "top3": [
+        {
+          "id": "faq:balde",
+          "sourceId": "balde",
+          "type": "faq",
+          "score": 0.6447581473163784,
+          "text": "Balde: 3 ferros formando um 'V'. Útil para água/lava e mineração segura.",
+          "resposta_ref": "Balde: 3 ferros formando um 'V'. Útil para água/lava e mineração segura.",
+          "metadata": {
+            "perguntas": [
+              "como fazer balde",
+              "qual receita de balde",
+              "como craftar bucket"
+            ]
+          }
+        },
+        {
+          "id": "doc:survival_basics.md#17",
+          "sourceId": "survival_basics.md#17",
+          "type": "doc",
+          "score": 0.45364321107924555,
+          "text": "---\r\n\r\n### Fim do guia inicial\r\nSe já dominou isso, próximo passo é **ferro** (armas, armadura leve, balde, tesoura) e **exploração segura**.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 17
+          }
+        },
+        {
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.4355551949016838,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "como fazer tesoura",
+      "top3": [
+        {
+          "id": "faq:tesoura",
+          "sourceId": "tesoura",
+          "type": "faq",
+          "score": 0.6032162769308453,
+          "text": "Tesoura: 2 ferros na diagonal. Permite colher lã sem matar a ovelha.",
+          "resposta_ref": "Tesoura: 2 ferros na diagonal. Permite colher lã sem matar a ovelha.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tesoura",
+              "qual receita de tesoura",
+              "como craftar shears"
+            ]
+          }
+        },
+        {
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.5900696364098952,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
+        },
+        {
+          "id": "faq:comida_inicial",
+          "sourceId": "comida_inicial",
+          "type": "faq",
+          "score": 0.5689468620337009,
+          "text": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "resposta_ref": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "metadata": {
+            "perguntas": [
+              "comida fácil no começo",
+              "o que comer no primeiro dia",
+              "como recuperar fome rápido no início"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "qual a diferença entre carvão e carvão vegetal",
+      "top3": [
+        {
+          "id": "faq:carvao_vs_carvao_vegetal",
+          "sourceId": "carvao_vs_carvao_vegetal",
+          "type": "faq",
+          "score": 0.7220314729971185,
+          "text": "Carvão (mineral) vem do minério; carvão vegetal (charcoal) é obtido na fornalha queimando troncos. Ambos servem para tochas e combustível.",
+          "resposta_ref": "Carvão (mineral) vem do minério; carvão vegetal (charcoal) é obtido na fornalha queimando troncos. Ambos servem para tochas e combustível.",
+          "metadata": {
+            "perguntas": [
+              "qual a diferença entre carvão e carvão vegetal",
+              "carvão e charcoal são iguais",
+              "posso usar carvão vegetal para tocha"
+            ]
+          }
+        },
+        {
+          "id": "faq:carvão_vegetal",
+          "sourceId": "carvão_vegetal",
+          "type": "faq",
+          "score": 0.6297579934576447,
+          "text": "Coloque TRONCOS na parte de cima da fornalha e um combustível embaixo (troncos, tábuas, gravetos, carvão). O resultado é CARVÃO VEGETAL (charcoal).",
+          "resposta_ref": "Coloque TRONCOS na parte de cima da fornalha e um combustível embaixo (troncos, tábuas, gravetos, carvão). O resultado é CARVÃO VEGETAL (charcoal).",
+          "metadata": {
+            "perguntas": [
+              "como fazer carvão vegetal",
+              "não tenho carvão mineral",
+              "como conseguir charcoal",
+              "dá para fazer carvão sem mina"
+            ]
+          }
+        },
+        {
+          "id": "doc:survival_basics.md#6",
+          "sourceId": "survival_basics.md#6",
+          "type": "doc",
+          "score": 0.628009496320079,
+          "text": "- **Abrigo imediato (qualquer bloco):**\r\n  - Faça um “buraco” 2×2×2 na encosta e tampe com **porta** (6 tábuas na bancada, duas colunas de 3) **ou** com blocos deixando uma “janelinha” para ver fora. - **Luz imediata (carvão vegetal):**\r\n  1. Faça uma **Fornalha** (8 pedras em volta, vazio no centro). 2. Coloque **troncos de madeira** no quadrado de cima e **qualquer combustível** embaixo (tábuas, gravetos, troncos) → produz **Carvão Vegetal (Charcoal)**. 3. **Tochas:** 1 **carvão vegetal** em cima + 1 **graveto** embaixo → 4 tochas. - **Ilumine** o interior e a entrada do abrigo.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 6
+          }
+        }
+      ]
+    },
+    {
+      "query": "comida fácil no começo",
+      "top3": [
+        {
+          "id": "faq:comida_inicial",
+          "sourceId": "comida_inicial",
+          "type": "faq",
+          "score": 0.6548593049686943,
+          "text": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "resposta_ref": "Cozinhe carnes (vaca/porco/ovelha) na fornalha; maçãs de folhas de carvalho. Comida cozida dá mais saturação que crua.",
+          "metadata": {
+            "perguntas": [
+              "comida fácil no começo",
+              "o que comer no primeiro dia",
+              "como recuperar fome rápido no início"
+            ]
+          }
+        },
+        {
+          "id": "doc:crafting_basics_ext.md#2",
+          "sourceId": "crafting_basics_ext.md#2",
+          "type": "doc",
+          "score": 0.4745438886755906,
+          "text": "## Problemas frequentes e correções\n- **“A receita não funciona!”** → Verifique a **grade** (2×2 vs 3×3) e a **ordem** dos itens.\n- **“Não consigo carvão mineral.”** → Faça **carvão vegetal** queimando **troncos**.\n- **“A comida não resolve.”** → **Cozinhe** carnes para melhor saturação.\n- **“Perco a casa.”** → Marque com **totens** e **tochas**; anote coordenadas (F3).",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "crafting_basics_ext.md",
+            "chunk": 2
+          }
+        },
+        {
+          "id": "doc:controles_e_interacoes.md#2",
+          "sourceId": "controles_e_interacoes.md#2",
+          "type": "doc",
+          "score": 0.4506445873298807,
+          "text": "- **Fome 0** → perde vida. - **Comidas cozidas** duram mais (saturação).",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "controles_e_interacoes.md",
+            "chunk": 2
+          }
+        }
+      ]
+    },
+    {
+      "query": "tochas impedem spawn",
+      "top3": [
+        {
+          "id": "faq:luz_e_spawn",
+          "sourceId": "luz_e_spawn",
+          "type": "faq",
+          "score": 0.6597360874786397,
+          "text": "Tochas elevam o nível de luz e impedem spawn de monstros nas áreas iluminadas. Ilumine dentro e fora do abrigo.",
+          "resposta_ref": "Tochas elevam o nível de luz e impedem spawn de monstros nas áreas iluminadas. Ilumine dentro e fora do abrigo.",
+          "metadata": {
+            "perguntas": [
+              "tochas impedem spawn",
+              "como impedir monstros de nascer",
+              "qual iluminação mínima para não nascer mobs"
+            ]
+          }
+        },
+        {
+          "id": "faq:tocha",
+          "sourceId": "tocha",
+          "type": "faq",
+          "score": 0.4521252197421057,
+          "text": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "resposta_ref": "Para fazer tochas: 1 carvão (mineral OU vegetal) acima de 1 graveto → rende 4 tochas. Coloque tochas para impedir spawn em áreas escuras.",
+          "metadata": {
+            "perguntas": [
+              "como fazer tocha",
+              "qual é a receita da tocha",
+              "como craftar tocha",
+              "dá para fazer tocha com carvão vegetal",
+              "como iluminar com tocha no início"
+            ]
+          }
+        },
+        {
+          "id": "faq:ponto_respawn",
+          "sourceId": "ponto_respawn",
+          "type": "faq",
+          "score": 0.35388041645336343,
+          "text": "Dormir em uma cama define o ponto de respawn (última cama usada).",
+          "resposta_ref": "Dormir em uma cama define o ponto de respawn (última cama usada).",
+          "metadata": {
+            "perguntas": [
+              "como definir ponto de respawn",
+              "como mudar spawn",
+              "dormir muda o spawn"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query": "por que não cavar reto para baixo",
+      "top3": [
+        {
+          "id": "faq:nunca_cavar_reto",
+          "sourceId": "nunca_cavar_reto",
+          "type": "faq",
+          "score": 0.7390332237544187,
+          "text": "Cavar reto para baixo pode te jogar em lava/buracos. Use escadinha ou cava alternado em 2 blocos.",
+          "resposta_ref": "Cavar reto para baixo pode te jogar em lava/buracos. Use escadinha ou cava alternado em 2 blocos.",
+          "metadata": {
+            "perguntas": [
+              "por que não cavar reto para baixo",
+              "é perigoso cavar para baixo",
+              "como minerar com segurança"
+            ]
+          }
+        },
+        {
+          "id": "doc:crafting_basics_ext.md#2",
+          "sourceId": "crafting_basics_ext.md#2",
+          "type": "doc",
+          "score": 0.5151403956339486,
+          "text": "## Problemas frequentes e correções\n- **“A receita não funciona!”** → Verifique a **grade** (2×2 vs 3×3) e a **ordem** dos itens.\n- **“Não consigo carvão mineral.”** → Faça **carvão vegetal** queimando **troncos**.\n- **“A comida não resolve.”** → **Cozinhe** carnes para melhor saturação.\n- **“Perco a casa.”** → Marque com **totens** e **tochas**; anote coordenadas (F3).",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "crafting_basics_ext.md",
+            "chunk": 2
+          }
+        },
+        {
+          "id": "doc:survival_basics.md#13",
+          "sourceId": "survival_basics.md#13",
+          "type": "doc",
+          "score": 0.5025085421740555,
+          "text": "**O que é “saturação”?**  \r\nValor oculto que define por quanto tempo você fica saciado. **Comidas melhores** (cozidas) aumentam mais a saturação. ---\r\n\r\n## 9) Micro‑procedimentos (RAG amigável)\r\n**P: “Quero acender luz agora e não achei carvão.”**  \r\n**R:** 1) Faça **fornalha** (8 pedras) → 2) coloque **troncos** em cima e **tábuas** embaixo → 3) pegue **carvão vegetal** → 4) craft **tocha** (carvão + graveto) → 5) ilumine **dentro e fora** do abrigo.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "survival_basics.md",
+            "chunk": 13
+          }
+        }
+      ]
+    },
+    {
+      "query": "como definir ponto de respawn",
+      "top3": [
+        {
+          "id": "faq:ponto_respawn",
+          "sourceId": "ponto_respawn",
+          "type": "faq",
+          "score": 0.8194841891193128,
+          "text": "Dormir em uma cama define o ponto de respawn (última cama usada).",
+          "resposta_ref": "Dormir em uma cama define o ponto de respawn (última cama usada).",
+          "metadata": {
+            "perguntas": [
+              "como definir ponto de respawn",
+              "como mudar spawn",
+              "dormir muda o spawn"
+            ]
+          }
+        },
+        {
+          "id": "faq:cama",
+          "sourceId": "cama",
+          "type": "faq",
+          "score": 0.5449190417589014,
+          "text": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "resposta_ref": "Cama: linha do meio com 3 lãs + linha de baixo com 3 tábuas. Dormir pula a noite e define ponto de respawn.",
+          "metadata": {
+            "perguntas": [
+              "como fazer cama",
+              "qual é a receita da cama",
+              "como craftar bed",
+              "como pular a noite"
+            ]
+          }
+        },
+        {
+          "id": "faq:luz_e_spawn",
+          "sourceId": "luz_e_spawn",
+          "type": "faq",
+          "score": 0.4497830839270476,
+          "text": "Tochas elevam o nível de luz e impedem spawn de monstros nas áreas iluminadas. Ilumine dentro e fora do abrigo.",
+          "resposta_ref": "Tochas elevam o nível de luz e impedem spawn de monstros nas áreas iluminadas. Ilumine dentro e fora do abrigo.",
+          "metadata": {
+            "perguntas": [
+              "tochas impedem spawn",
+              "como impedir monstros de nascer",
+              "qual iluminação mínima para não nascer mobs"
+            ]
+          }
         }
       ]
     }

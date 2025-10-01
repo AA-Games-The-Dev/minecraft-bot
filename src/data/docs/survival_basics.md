@@ -1,182 +1,182 @@
-# Guia de Sobrevivência Absoluta (0 conhecimento → primeiras 3 horas)
+# Absolute Survival Guide (0 knowledge → first 3 hours)
 
-> Objetivo: ensinar alguém *100% blind* a sair vivo do dia 1, montar abrigo, acender luz, fazer ferramentas e comida básica. Texto pensado para RAG: dividido em passos, perguntas frequentes e procedimentos curtos.
-
----
-
-## 0) Controles essenciais (PC – padrão Java Edition)
-- **Mover:** W A S D  
-- **Olhar:** mouse
-- **Pular:** Espaço  
-- **Agachar:** Shift esquerdo (segurar) → não cai de quinas facilmente; agacha para se aproximar de arestas
-- **Correr:** Ctrl esquerdo (segurar) ou duas vezes W  
-- **Quebrar bloco / atacar:** Botão esquerdo (segure até o bloco “quebrar”)
-- **Usar / colocar bloco / abrir porta / acender fogueira / interagir:** Botão direito
-- **Abrir inventário:** **E**
-- **Abrir a “mãozinha extra” (crafting 2×2) no inventário:** **E** → quadrado 2×2 no canto
-- **Trocar item rápido (hotbar):** rolar a rodinha do mouse (1–9)
-- **Soltar item:** Q (segurar Q solta vários)
-- **Trocar item na outra mão (se tiver):** F
-- **Abrir mesa de trabalho / fornalha / baú:** Botão direito sobre o bloco
-
-> Dica: Itens no chão entram no inventário ao passar por cima. Se a mochila lotar, itens ficam no chão e **podem sumir** após alguns minutos.
+> Goal: teach a *100% blind* player to survive day 1, build shelter, add light, craft tools, and basic food. Text designed for RAG: split into steps, FAQs, and short procedures.
 
 ---
 
-## 1) Começo do Dia 1 — “punho na árvore” (min 0–5)
-1. **Olhe ao redor e pegue madeira:** chegue perto de um tronco de árvore e **segure o botão esquerdo** até o bloco quebrar → pegue o **Tronco de madeira (Log)** no chão. Repita até ter **6–10 troncos**.
-2. **Abra o inventário (E)** → arraste os troncos para a área de crafting 2×2 → **resultado: Tábuas de madeira (Planks)**.  
-   - Cada tronco vira **4** tábuas.
-3. **Faça uma Bancada de Trabalho (Crafting Table):** coloque **4 tábuas** em quadrado 2×2 → pegue a **Bancada**.
-4. **Coloque a Bancada no chão:** selecione a bancada na hotbar e **botão direito** no chão.
-5. **Faça Gravetos (Sticks):** na bancada ou no 2×2, use **1 tábua sobre 1 tábua** (em coluna). Saem **4 gravetos** por receita. Faça **8–12 gravetos**.
+## 0) Essential controls (PC – Java Edition defaults)
+- **Move:** W A S D
+- **Look:** mouse
+- **Jump:** Space
+- **Sneak:** Left Shift (hold) → less chance to fall off edges
+- **Sprint:** Left Ctrl (hold) or double‑tap W
+- **Break block / attack:** Left mouse (hold until the block “breaks”)
+- **Use / place / open door / light campfire / interact:** Right mouse
+- **Open inventory:** **E**
+- **Open the “extra hand” (2×2 crafting) in inventory:** **E** → 2×2 square
+- **Switch hotbar item:** mouse wheel (1–9)
+- **Drop item:** Q (hold Q to drop multiple)
+- **Swap item to off‑hand (if available):** F
+- **Open crafting table / furnace / chest:** Right‑click the block
 
-> Por que segurar para quebrar? Blocos exigem tempo de “mina” (mineração). O punho quebra madeira devagar; ferramentas certas quebram mais rápido.
-
----
-
-## 2) Ferramentas de madeira → de pedra (min 5–12)
-1. **Picareta de madeira (temporária):** na bancada 3×3:  
-   - Linha de cima: **3 tábuas**  
-   - Coluna do meio: **2 gravetos** (centro e baixo)  
-   → Faça **1 picareta de madeira**.
-2. **Ache pedra (Cobblestone):** procure encostas/cavidades visíveis. **Nunca cave para baixo em linha reta.**
-3. **Minere 20 pedras** com a picareta de madeira.
-4. **Faça ferramentas de pedra (melhores):**
-   - **Picareta de pedra:** 3 pedras em cima + 2 gravetos no meio.  
-   - **Machado de pedra:** 3 pedras em “L” (duas em cima, uma à esquerda do meio) + 2 gravetos.  
-   - **Pá de pedra:** 1 pedra no topo + 2 gravetos.  
-   - **Espada de pedra (opcional):** 2 pedras em coluna + 1 graveto.
-5. **Jogue fora ou guarde** a picareta de madeira (serve para emergências).
-
-> Prioridade: **machado** (para madeira mais rápida) e **picareta** (para minérios).
+> Tip: Items on the ground enter your inventory when you walk over them. If your inventory is full, items remain on the ground and **may despawn** after a few minutes.
 
 ---
 
-## 3) Abrigo rápido + luz antes de escurecer (min 12–20)
-- **Siga o relógio do sol:** o dia dura ~10 min e a noite ~10 min (ciclo total ~20 min). Planeje dormir **antes** de ficar escuro.
-- **Abrigo imediato (qualquer bloco):**
-  - Faça um “buraco” 2×2×2 na encosta e tampe com **porta** (6 tábuas na bancada, duas colunas de 3) **ou** com blocos deixando uma “janelinha” para ver fora.
-- **Luz imediata (carvão vegetal):**
-  1. Faça uma **Fornalha** (8 pedras em volta, vazio no centro).  
-  2. Coloque **troncos de madeira** no quadrado de cima e **qualquer combustível** embaixo (tábuas, gravetos, troncos) → produz **Carvão Vegetal (Charcoal)**.  
-  3. **Tochas:** 1 **carvão vegetal** em cima + 1 **graveto** embaixo → 4 tochas.
-- **Ilumine** o interior e a entrada do abrigo. Monstros **não nascem** em blocos com luz suficiente.
+## 1) Start of Day 1 — “fist to the tree” (min 0–5)
+1. **Look around and get wood:** walk to a tree log and **hold left click** until it breaks → pick up the **Log**. Repeat until you have **6–10 logs**.
+2. **Open inventory (E)** → drag logs to the 2×2 crafting area → **result: Wooden Planks**.
+   - Each log becomes **4** planks.
+3. **Make a Crafting Table:** place **4 planks** in a 2×2 square → take the **Table**.
+4. **Place the Table on the ground:** select it in your hotbar and **right‑click** the ground.
+5. **Make Sticks:** in the table or 2×2, put **1 plank above 1 plank** (in a column). You get **4 sticks** per recipe. Make **8–12 sticks**.
 
-> Alternativa: encontre **ovelhas** (3 lãs) + **tábuas** → **Cama**. Dormir **pula a noite** e define **ponto de renascimento**.
+> Why hold to break? Blocks need mining time. Bare hands are slow; proper tools are faster.
 
 ---
 
-## 4) Fome, vida e comida básica (min 20–35)
-- **Barras:** Fome cheia → **vida regenera**. Fome ≤ 6 pontos → não corre. Fome 0 → começa a perder vida.
-- **Comidas fáceis do dia 1:**
-  - **Maçãs** caem ao quebrar folhas de carvalho (chance).
-  - **Carne crua** (vacas/porcos/ovelhas) → **cozinhe** na fornalha (carvão/lenha embaixo, carne em cima).
-  - **Pão:** plante e colha **trigo** (demora mais; melhor do dia 2+).
-- **Dicas:** sempre **cozinhe** carnes → rendem mais fome e saturação. **Leve 8–12 comidas** na hotbar.
+## 2) Wooden tools → stone tools (min 5–12)
+1. **Wooden pickaxe (temporary):** at the 3×3 table:
+   - Top row: **3 planks**
+   - Middle column: **2 sticks** (center and bottom)
+   → Make **1 wooden pickaxe**.
+2. **Find cobblestone:** look for cliffs/caves. **Never dig straight down.**
+3. **Mine 20 cobblestone** with the wooden pickaxe.
+4. **Make stone tools (better):**
+   - **Stone pickaxe:** 3 stone on top + 2 sticks in the middle column.
+   - **Stone axe:** 3 stone in an “L” (two on top, one at middle‑left) + 2 sticks.
+   - **Stone shovel:** 1 stone at the top + 2 sticks.
+   - **Stone sword (optional):** 2 stone in a column + 1 stick.
+5. **Discard or store** the wooden pickaxe (emergency use only).
+
+> Priorities: **axe** (faster wood) and **pickaxe** (for ores).
 
 ---
 
-## 5) Organização mínima da base (min 35–60)
-- **Baú:** 8 tábuas em volta (vazio centro). Faça 2 e junte lado a lado para um **baú duplo**.
-- **Marcar casa:** coloque **tochas** em volta, um **pilar** alto com tocha no topo, ou uma **coluna de terra** (“totem de volta pra casa”).
-- **Replantar árvores:** use **mudas** (saplings) que caem das folhas → sustenta madeira infinita.
-- **Porta + pressão:** porta de madeira abre manualmente. Placas de pressão (tábuas lado a lado) ajudam, mas **zumbis podem abrir portas** em dificuldades mais altas (Java difícil).
+## 3) Quick shelter + light before dark (min 12–20)
+- **Watch the sun:** day lasts ~10 min and night ~10 min (total ~20 min). Plan to sleep **before** it gets dark.
+- **Instant shelter (any block):**
+  - Carve a 2×2×2 hole in a hillside and close with a **door** (6 planks in the table, two columns of 3) **or** block it off leaving a small **window**.
+- **Immediate light (charcoal):**
+  1. Craft a **Furnace** (8 stone around, empty center).
+  2. Put **logs** in the top slot and **any fuel** below (planks, sticks, logs) → produces **Charcoal**.
+  3. **Torches:** 1 **charcoal** on top + 1 **stick** below → 4 torches.
+- **Light up** the inside and the entrance. Hostile mobs **don’t spawn** on well‑lit blocks.
+
+> Alternative: find **sheep** (3 wool) + **planks** → **Bed**. Sleeping **skips the night** and sets **respawn**.
 
 ---
 
-## 6) Mineração segura (min 60–120)
-- **Regra de ouro:** **nunca cave reto pra baixo**. Use **escadinha** (staircase) ou cava em **2 blocos** alternados (fica sempre pisando em um).
-- **Tochas a cada 8–12 blocos.**
-- **Alturas úteis:** minérios variam por camada (Y). Ative a tela de debug (F3) para ver **Y** (Java).  
-- **Kit mineração:** 1 balde de **água** (se tiver ferro), comida, tochas extras, picareta reserva, madeira extra para fazer ferramentas/fornalha se quebrar no caminho.
-- **Fornalha de emergência:** dá para fundir **ferro** (minério de ferro + combustível) e fazer **balde** (3 ferros em “V”), **tesoura** (2 ferros na diagonal), etc.
+## 4) Hunger, health, and basic food (min 20–35)
+- **Bars:** Full hunger → **health regenerates**. Hunger ≤ 6 → no sprint. Hunger 0 → you start taking damage.
+- **Easy foods for day 1:**
+  - **Apples** from breaking oak leaves (chance).
+  - **Raw meat** (cows/pigs/sheep) → **cook** in the furnace (fuel below, meat above).
+  - **Bread:** grow **wheat** (slower; better from day 2+).
+- **Tips:** always **cook** meat → more hunger and saturation. **Carry 8–12 food** items in your hotbar.
 
 ---
 
-## 7) Primeiras metas (checklist)
-- [ ] Cama feita e **ponto de spawn** definido.  
-- [ ] Abrigo iluminado e **baú** organizado.  
-- [ ] Ferramentas **de pedra** completas.  
-- [ ] Fornalha + **carvão vegetal** e **tochas** suficientes.  
-- [ ] 8–12 comidas cozidas na mochila.  
-- [ ] Mineração segura iniciada (escadinha e tochas).
+## 5) Minimal base organization (min 35–60)
+- **Chest:** 8 planks around (empty center). Craft two and place side by side for a **double chest**.
+- **Mark home:** place **torches** outside, a **tall pillar** with a torch on top, or a **dirt column** (“back‑home totem”).
+- **Replant trees:** use **saplings** from leaves → sustainable wood.
+- **Door + pressure plates:** wooden door opens manually. Pressure plates (planks side by side) help, but **zombies can open doors** on higher difficulties (Java hard).
 
 ---
 
-## 8) Perguntas Frequentes (para RAG responder rápido)
-**Como pego madeira se não tenho nada?**  
-Chegue no tronco e **segure o botão esquerdo** até quebrar; pegue o item no chão. Transforme o **tronco** em **tábuas** pelo inventário (E).
-
-**Como coloco a bancada?**  
-Selecione-a na hotbar e use **botão direito** no chão.
-
-**Como faço tochas sem carvão mineral?**  
-Cozinhe **troncos** na **fornalha** para fazer **carvão vegetal**. Receita da tocha: **1 carvão + 1 graveto**.
-
-**Não consigo correr!**  
-Sua **fome** está ≤ 6 pontos. Coma até encher e então você voltará a correr.
-
-**Morro sempre à noite.**  
-Durma em uma **cama** (3 lãs + 3 tábuas) **antes** de escurecer **ou** fique num abrigo **iluminado**. Tochas **impedem spawn** de monstros na área.
-
-**Perdi minha casa!**  
-Marque o caminho com **totens de terra com tochas** ou anote coordenadas (Java: F3).
-
-**Posso quebrar pedra com a mão?**  
-Vai **demorar** e **não dropa** bloco útil. Faça ao menos uma **picareta de madeira**, melhor ainda de **pedra**.
-
-**O que é “saturação”?**  
-Valor oculto que define por quanto tempo você fica saciado. **Comidas melhores** (cozidas) aumentam mais a saturação.
+## 6) Safe mining (min 60–120)
+- **Golden rule:** **never dig straight down**. Use a **staircase** or dig alternating **two‑block** shafts (always standing on one).
+- **Torches every 8–12 blocks.**
+- **Useful heights:** ores vary by Y‑level. Use the debug screen (F3) to see **Y** (Java).
+- **Mining kit:** 1 bucket of **water** (if you have iron), food, extra torches, spare pickaxe, extra wood to craft tools/furnace if needed.
+- **Emergency furnace:** you can smelt **iron** (iron ore + fuel) to make a **bucket** (3 iron in a “V”), **shears** (2 iron diagonally), etc.
 
 ---
 
-## 9) Micro‑procedimentos (RAG amigável)
-**P: “Quero acender luz agora e não achei carvão.”**  
-**R:** 1) Faça **fornalha** (8 pedras) → 2) coloque **troncos** em cima e **tábuas** embaixo → 3) pegue **carvão vegetal** → 4) craft **tocha** (carvão + graveto) → 5) ilumine **dentro e fora** do abrigo.
-
-**P: “Como faço cama rápido?”**  
-**R:** 1) Ache **3 lãs** (mate 3 ovelhas **ou** use **tesoura** se tiver ferro) → 2) 3 **tábuas** na linha de baixo + 3 **lãs** na linha do meio.
-
-**P: “Quero comida rápida.”**  
-**R:** mate **porcos/vacas/ovelhas** → cozinhe na **fornalha** com carvão/lenha. Evite comer **carne crua**.
-
-**P: “Como não me perder?”**  
-**R:** Faça **totens** (coluna de blocos) com **tocha** no topo a cada curva importante **e** anote **coordenadas**.
+## 7) First goals (checklist)
+- [ ] Bed crafted and **respawn point** set.
+- [ ] Shelter lit and **chest** organized.
+- [ ] Full set of **stone tools**.
+- [ ] Furnace + **charcoal** and enough **torches**.
+- [ ] 8–12 cooked foods in inventory.
+- [ ] Safe mining underway (staircase + torches).
 
 ---
 
-## 10) Craft rápido (texto, sem imagens)
-- **Bancada:** 4 tábuas (2×2).  
-- **Graveto:** 1 tábua **em cima** de 1 tábua (coluna).  
-- **Fornalha:** 8 pedras em volta (vazio centro).  
-- **Tocha:** 1 carvão (mineral **ou** vegetal) em cima + 1 graveto embaixo.  
-- **Porta:** 6 tábuas (duas colunas de 3).  
-- **Baú:** 8 tábuas em volta (vazio centro).  
-- **Picareta:** 3 blocos duros em cima + 2 gravetos no meio.  
-- **Machado:** 3 blocos (madeira/pedra/ferro) em “L” + 2 gravetos.
+## 8) Frequently Asked Questions (for fast RAG answers)
+**How do I get wood if I have nothing?**
+Stand by a tree and **hold left click** until it breaks; pick up the log. Turn **logs** into **planks** in your inventory (E).
+
+**How do I place the table?**
+Select it in your hotbar and **right‑click** the ground.
+
+**How do I craft torches without coal ore?**
+Smelt **logs** in a **furnace** to make **charcoal**. Torch recipe: **1 coal/charcoal + 1 stick**.
+
+**I can’t sprint!**
+Your **hunger** is ≤ 6. Eat until it’s higher and you’ll sprint again.
+
+**I keep dying at night.**
+Sleep in a **bed** (3 wool + 3 planks) **before** night or stay in a **lit** shelter. Torches **prevent spawns** in the area.
+
+**I lost my base!**
+Mark the path with **totems** (block columns) with **a torch** on top and write down coordinates (Java: F3).
+
+**Can I break stone with my fist?**
+It takes **forever** and **doesn’t drop** useful blocks. Make at least a **wooden pickaxe**, preferably **stone**.
+
+**What is “saturation”?**
+A hidden value that controls how long you stay full. **Better foods** (cooked) give more saturation.
 
 ---
 
-## 11) Erros clássicos e como evitar
-- **Cavar reto pra baixo** → use **escadinha**.  
-- **Sair sem comida** → leve **8–12** unidades sempre.  
-- **Casa sem luz** → tochas **dentro e fora**.  
-- **Não fazer bancada cedo** → atrasa todos os crafts.  
-- **Lutar contra tudo à noite no início** → **evite combate**, durma cedo.
+## 9) Micro‑procedures (RAG‑friendly)
+**Q: “I need light now and found no coal.”**
+**A:** 1) Craft a **furnace** (8 stone) → 2) put **logs** on top and **planks** below → 3) take **charcoal** → 4) craft **torch** (charcoal + stick) → 5) light **inside and outside** the shelter.
+
+**Q: “How do I craft a bed quickly?”**
+**A:** 1) Get **3 wool** (kill 3 sheep **or** use **shears** if you have iron) → 2) 3 **planks** on the bottom row + 3 **wool** on the middle row.
+
+**Q: “Quick food?”**
+**A:** Kill **pigs/cows/sheep** → cook in the **furnace** with coal/wood. Avoid **raw meat**.
+
+**Q: “How not to get lost?”**
+**A:** Build **totems** (block columns) with a **torch** on top at each key turn **and** write down **coordinates**.
 
 ---
 
-## 12) Roteiro dos Primeiros 30 minutos (modo teleprompter para o bot)
-- **0–2 min:** pegar 6–10 troncos.  
-- **2–4 min:** bancada, gravetos, picareta de madeira.  
-- **4–8 min:** minerar 20 pedras; fazer picareta/machado/pá de pedra.  
-- **8–12 min:** fornalha, carvão vegetal, tochas.  
-- **12–18 min:** abrir abrigo simples e iluminar.  
-- **18–25 min:** caçar 8–12 comidas e cozinhar.  
-- **25–30 min:** baú, mais tochas, planejar mineração segura.
+## 10) Quick craft (text‑only, no images)
+- **Crafting Table:** 4 planks (2×2).
+- **Stick:** 1 plank **on top of** 1 plank (column).
+- **Furnace:** 8 stone around (empty center).
+- **Torch:** 1 coal (or charcoal) on top + 1 stick below.
+- **Door:** 6 planks (two columns of 3).
+- **Chest:** 8 planks around (empty center).
+- **Pickaxe:** 3 hard blocks on top + 2 sticks in the middle column.
+- **Axe:** 3 blocks (wood/stone/iron) in an “L” + 2 sticks.
 
 ---
 
-### Fim do guia inicial
-Se já dominou isso, próximo passo é **ferro** (armas, armadura leve, balde, tesoura) e **exploração segura**.
+## 11) Classic mistakes & how to avoid them
+- **Digging straight down** → use a **staircase**.
+- **Leaving without food** → always carry **8–12** units.
+- **Unlit house** → torches **inside and outside**.
+- **Delaying the crafting table** → slows all crafts.
+- **Fighting everything at night early on** → **avoid combat**, sleep early.
+
+---
+
+## 12) First 30 minutes script (teleprompter mode for the bot)
+- **0–2 min:** gather 6–10 logs.
+- **2–4 min:** crafting table, sticks, wooden pickaxe.
+- **4–8 min:** mine 20 stone; make stone pickaxe/axe/shovel.
+- **8–12 min:** furnace, charcoal, torches.
+- **12–18 min:** set up a simple, lit shelter.
+- **18–25 min:** hunt 8–12 food and cook.
+- **25–30 min:** chest, more torches, plan safe mining.
+
+---
+
+### End of the initial guide
+If you’re comfortable with this, the next step is **iron** (weapons, light armor, bucket, shears) and **safe exploration**.
