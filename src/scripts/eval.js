@@ -40,10 +40,17 @@ async function main() {
   let recallAt1 = 0;
   let recallAt3 = 0;
   let groundedSum = 0;
+  let processed = 0;
 
   for (const item of dataset) {
-    const query = item.pergunta[0];
-    const top3 = await retrieveTopK(query, 3);
+    const questions = item.pergunta || item.question;
+    if (!questions || (Array.isArray(questions) && questions.length === 0)) {
+      console.warn(`Item ${item.id} sem perguntas válidas. Ignorando.`);
+      continue;
+    }
+
+    const query = Array.isArray(questions) ? questions[0] : questions;
+    const top3 = (await retrieveTopK(query, 3)) || [];
     const top1 = top3[0];
     const relevantId = `faq:${item.id}`;
 
@@ -57,16 +64,24 @@ async function main() {
     }
 
     results.push({ query, top3 });
+    processed++;
   }
 
-  const n = dataset.length;
-  const metrics = {
-    precision_at_1: precisionAt1 / n,
-    precision_at_3: precisionAt3 / n,
-    recall_at_1: recallAt1 / n,
-    recall_at_3: recallAt3 / n,
-    groundedness: groundedSum / n
-  };
+  const metrics = processed
+    ? {
+        precision_at_1: precisionAt1 / processed,
+        precision_at_3: precisionAt3 / processed,
+        recall_at_1: recallAt1 / processed,
+        recall_at_3: recallAt3 / processed,
+        groundedness: groundedSum / processed
+      }
+    : {
+        precision_at_1: 0,
+        precision_at_3: 0,
+        recall_at_1: 0,
+        recall_at_3: 0,
+        groundedness: 0
+      };
 
   const evalDir = path.join(__dirname, '..', 'eval');
   if (!fs.existsSync(evalDir)) fs.mkdirSync(evalDir);

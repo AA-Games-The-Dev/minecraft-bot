@@ -45,10 +45,18 @@ function f1Score(prediction, reference) {
 }
 
 async function evaluateItem(item) {
-  const question = item.pergunta[0];
-  const context = await retrieveTopK(question, 3);
+  const questions = item.pergunta || item.question;
+  if (!questions || (Array.isArray(questions) && questions.length === 0)) {
+    throw new Error(`Item ${item.id} sem pergunta válida.`);
+  }
+
+  const question = Array.isArray(questions) ? questions[0] : questions;
+  const context = (await retrieveTopK(question, 3)) || [];
   const contextText = context
-    .map((doc, idx) => `Trecho ${idx + 1} (${doc.type} - ${doc.sourceId}, score ${doc.score.toFixed(3)}):\n${doc.text}`)
+    .map((doc, idx) => {
+      const score = typeof doc.score === 'number' ? doc.score.toFixed(3) : 'n/d';
+      return `Trecho ${idx + 1} (${doc.type || 'desconhecido'} - ${doc.sourceId || doc.id || 's/ fonte'}, score ${score}):\n${doc.text || ''}`;
+    })
     .join('\n\n');
 
   const messages = [
@@ -60,11 +68,12 @@ async function evaluateItem(item) {
   ];
 
   const answer = await sendChatCompletion(config.llm, messages);
-  const score = f1Score(answer, item.resposta_ref);
+  const referenceAnswer = item.resposta_ref || item.answer_ref || '';
+  const score = f1Score(answer, referenceAnswer);
   return {
     id: item.id,
     question,
-    reference: item.resposta_ref,
+    reference: referenceAnswer,
     answer,
     f1: score,
     context

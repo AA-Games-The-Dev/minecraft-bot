@@ -50,25 +50,34 @@ function chunkDocument(text, { maxChars = 600 } = {}) {
   return chunks;
 }
 
+function normaliseToArray(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (typeof value === 'string') return [value].filter(Boolean);
+  return [];
+}
+
 async function buildFaqEntries(dataset, embedder) {
   const entries = [];
   for (const item of dataset) {
-    const combined = [
-      ...(item.pergunta || []),
-      item.resposta_ref || ''
-    ].join(' ');
-    const embedding = await embedText(combined, { embedder });
+    const questionsPt = normaliseToArray(item.pergunta);
+    const questionsEn = normaliseToArray(item.question);
+    const allQuestions = [...questionsPt, ...questionsEn];
+    const answer = item.resposta_ref || item.answer_ref || '';
+    const combined = [...allQuestions, answer].join(' ').trim();
+    const embedding = await embedText(combined || item.id, { embedder });
+
     entries.push({
       id: `faq:${item.id}`,
       source_id: item.id,
       type: 'faq',
-      text: item.resposta_ref,
+      text: answer,
       embedding,
-      resposta_ref: item.resposta_ref,
+      resposta_ref: answer,
       metadata: {
-        perguntas: item.pergunta,
-        fontes: item.fontes,
-        trechos: item.trechos
+        perguntas: allQuestions,
+        fontes: item.fontes || item.sources,
+        trechos: item.trechos || item.snippets
       }
     });
   }
