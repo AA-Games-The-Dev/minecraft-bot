@@ -20,6 +20,43 @@ const path = require('path');
 const config = require('../config');
 const { loadEmbedder, embedText } = require('./embeddings');
 
+function normaliseToArray(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (typeof value === 'string') return [value].filter(Boolean);
+  return [];
+}
+
+let faqDatasetCache = null;
+
+function loadFaqDataset() {
+  if (faqDatasetCache) return faqDatasetCache;
+  const datasetPath = path.join(__dirname, '..', 'data', 'recipes.json');
+  if (!fs.existsSync(datasetPath)) {
+    faqDatasetCache = new Map();
+    return faqDatasetCache;
+  }
+
+  try {
+    const raw = JSON.parse(fs.readFileSync(datasetPath, 'utf8'));
+    faqDatasetCache = new Map(
+      raw.map((item) => [
+        item.id,
+        {
+          questions: [...normaliseToArray(item.pergunta), ...normaliseToArray(item.question)],
+          answer: item.resposta_ref || item.answer_ref || '',
+          fontes: item.fontes || item.sources,
+          trechos: item.trechos || item.snippets
+        }
+      ])
+    );
+  } catch (error) {
+    console.warn('Não foi possível carregar recipes.json para metadados FAQ:', error.message || error);
+    faqDatasetCache = new Map();
+  }
+  return faqDatasetCache;
+}
+
 let indexCache = null;
 
 function loadIndex() {
@@ -56,6 +93,7 @@ async function retrieveTopK(query, k = 3) {
   if (docs.length === 0) return [];
 
   const queryEmbedding = await embedQuery(query);
+  const faqDataset = loadFaqDataset();
   const scored = docs
     .map((doc) => ({
       id: doc.id,
@@ -68,7 +106,33 @@ async function retrieveTopK(query, k = 3) {
     }))
     .sort((a, b) => b.score - a.score);
 
-  return scored.slice(0, k);
+  return scored.slice(0, k).map((doc) => {
+    if (doc.type !== 'faq') return doc;
+
+    const datasetEntry = faqDataset.get(doc.sourceId?.replace(/^faq:/, '') || doc.sourceId || doc.id?.replace(/^faq:/, ''));
+    if (!datasetEntry) return doc;
+
+    const metadata = { ...doc.metadata };
+    const perguntasMetadata = normaliseToArray(metadata.perguntas);
+    if (perguntasMetadata.length === 0 && datasetEntry.questions?.length) {
+      metadata.perguntas = datasetEntry.questions;
+    } else if (perguntasMetadata.length > 0) {
+      metadata.perguntas = perguntasMetadata;
+    }
+    if (!metadata.fontes && datasetEntry.fontes) {
+      metadata.fontes = datasetEntry.fontes;
+    }
+    if (!metadata.trechos && datasetEntry.trechos) {
+      metadata.trechos = datasetEntry.trechos;
+    }
+
+    return {
+      ...doc,
+      text: doc.text || datasetEntry.answer,
+      resposta_ref: doc.resposta_ref || datasetEntry.answer || null,
+      metadata
+    };
+  });
 }
 
 async function retrieveAnswer(query, options = {}) {
