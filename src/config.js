@@ -13,7 +13,7 @@ module.exports = {
     endpoint: process.env.LLM_ENDPOINT || 'http://localhost:5555/v1/chat/completions',
     model: process.env.LLM_MODEL || 'glm-4-9b-chat-1m',
     apiKey: process.env.LLM_API_KEY || null,
-    temperature: Number(process.env.LLM_TEMPERATURE || 0.2),
+    temperature: Number(process.env.LLM_TEMPERATURE || 0.3),
     maxTokens: process.env.LLM_MAX_TOKENS ? Number(process.env.LLM_MAX_TOKENS) : undefined,
     headers: {},
     timeoutMs: Number(process.env.LLM_TIMEOUT_MS || 120000)
