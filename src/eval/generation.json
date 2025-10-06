@@ -1,14 +1,14 @@
 {
   "metrics": {
-    "mean_f1": 0.6900702783630113
+    "mean_f1": 0.6636544432210933
   },
   "results": [
     {
       "id": "picareta_madeira",
       "question": "como fazer uma picareta de madeira?",
       "reference": "Para fazer uma picareta de madeira, transforme um tronco em tábuas, faça dois gravetos e, na mesa de trabalho 3×3, coloque 3 tábuas na linha superior e 2 gravetos na coluna central. Essa ferramenta é usada para minerar pedra e minérios básicos.",
-      "answer": "Para fazer uma picareta de madeira, você precisa transformar um tronco em tábuas e gravetos. Primeiro, faça 6 tábuas e 2 gravetos. Em seguida, coloque 3 tábuas na linha superior e 2 gravetos na coluna central da mesa de trabalho 3×3. Isso vai criar uma picareta de madeira temporária.",
-      "f1": 0.6666666666666666,
+      "answer": "Para fazer uma picareta de madeira, você precisa transformar um tronco em tábuas e gravetos. Primeiro, faça tábuas com o tronco na mesa de trabalho 3×3. Em seguida, faça dois gravetos. Coloque três tábuas na linha superior da mesa de trabalho e dois gravetos na coluna central para criar a picareta de madeira.",
+      "f1": 0.6391752577319588,
       "context": [
         {
           "id": "faq:picareta_madeira",
@@ -71,8 +71,8 @@
       "id": "machado_madeira",
       "question": "como faço um machado de madeira?",
       "reference": "Para criar um machado de madeira, produza tábuas a partir de um tronco, crie dois gravetos e, em seguida, coloque 3 tábuas em ‘L’ no canto superior esquerdo da grade 3×3 e 2 gravetos na coluna central. O machado corta madeira e objetos de madeira mais rápido.",
-      "answer": "Para criar um machado de madeira, você precisa fazer o seguinte:\n\n1. Produza tábuas a partir de um tronco.\n2. Crie dois gravetos.\n3. Coloque 3 tábuas em formato de \"L\" no canto superior esquerdo da grade 3×3.\n4. Coloque os 2 gravetos na coluna central.\n\nO machado de madeira corta madeira e objetos de madeira mais rápido.",
-      "f1": 0.822429906542056,
+      "answer": "Para fazer um machado de madeira, você precisa de tábuas e gravetos. Primeiro, produza tábuas a partir de um tronco. Em seguida, crie dois gravetos. Coloque três tábuas em formato \"L\" no canto superior esquerdo da grade 3×3 e os dois gravetos na coluna central. Isso criará um machado de madeira que corta madeira e objetos de madeira mais rápido.",
+      "f1": 0.8073394495412843,
       "context": [
         {
           "id": "faq:machado_madeira",
@@ -483,8 +483,8 @@
       "id": "tábuas",
       "question": "como obter tábuas?",
       "reference": "Tábuas de madeira são obtidas ao colocar um tronco (log) no quadrado de 2×2 do inventário ou na mesa de trabalho; cada tronco rende quatro tábuas. Elas são base para muitos outros itens.",
-      "answer": "Para obter tábuas, você precisa coletar troncos (logs) e transformá-los em tábuas. Você pode fazer isso colocando um tronco no quadrado de 2×2 do inventário ou na mesa de trabalho. Cada tronco rende quatro tábuas.",
-      "f1": 0.5915492957746479,
+      "answer": "Para obter tábuas, você pode quebrar troncos com as mãos ou usar uma picareta. Cada tronco rende quatro tábuas.",
+      "f1": 0.3018867924528302,
       "context": [
         {
           "id": "faq:tábuas",
@@ -513,6 +513,20 @@
           }
         },
         {
+          "id": "doc:tabuas.md#5",
+          "sourceId": "tabuas.md#5",
+          "type": "doc",
+          "similarity": 0.5976048964264445,
+          "lexicalScore": 0.5,
+          "score": 0.7726048964264445,
+          "text": "### Reparo (bigorna)\r\n\r\n* Tábuas reparam itens do **nível madeira**: espada, picareta, machado, pá, enxada e **escudo**. ---\r\n\r\n## Sons\r\n\r\n* Tábuas comuns usam o conjunto de sons “wood”; cerejeira tem variação “cherry_wood”; carmesim/distorcida usam o conjunto “nether wood”. ---\r\n\r\n## Dicas rápidas\r\n\r\n* Converta troncos em tábuas para **maximizar rendimento**: 1 tronco ⇒ 4 tábuas; 2 tábuas ⇒ 4 gravetos. * Use **tábuas do Nether** (carmesim/distorcida) quando quiser **imunidade a fogo** em construções no Nether.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "tabuas.md",
+            "chunk": 5
+          }
+        },
+        {
           "id": "doc:crafting_basics.md#0",
           "sourceId": "crafting_basics.md#0",
           "type": "doc",
@@ -525,32 +539,6 @@
             "source": "crafting_basics.md",
             "chunk": 0
           }
-        },
-        {
-          "id": "faq:enxada_madeira",
-          "sourceId": "enxada_madeira",
-          "type": "faq",
-          "similarity": 0.5312392277965107,
-          "lexicalScore": 0.5,
-          "score": 0.7062392277965106,
-          "text": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio.",
-          "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio.",
-          "metadata": {
-            "perguntas": [
-              "como faço uma enxada?",
-              "como craftar hoe?"
-            ],
-            "fontes": [
-              "Minecraft crafting guide"
-            ],
-            "trechos": [
-              {
-                "doc": "crafting_basics.md",
-                "secao": "Ferramentas de madeira",
-                "descricao": "Passo a passo para montar a enxada."
-              }
-            ]
-          }
         }
       ]
     },
@@ -558,8 +546,8 @@
       "id": "mesa_trabalho",
       "question": "como faço uma mesa de trabalho?",
       "reference": "A mesa de trabalho (crafting table) se faz com quatro tábuas de madeira dispostas em um quadrado 2×2. Ao colocar a mesa no chão e clicar com o botão direito, você obtém uma grade 3×3 para criar receitas mais complexas.",
-      "answer": "Para fazer uma mesa de trabalho, você precisa de quatro tábuas de madeira dispostas em um quadrado 2×2 na mesa de trabalho (crafting table).",
-      "f1": 0.5671641791044777,
+      "answer": "Para fazer uma mesa de trabalho, coloque quatro tábuas de madeira dispostas em um quadrado 2×2 na mesa de trabalho.",
+      "f1": 0.5079365079365079,
       "context": [
         {
           "id": "faq:mesa_trabalho",
@@ -709,8 +697,8 @@
       "id": "bau",
       "question": "como faço um baú?",
       "reference": "Um baú é feito com oito tábuas de madeira circundando a grade de 3×3, deixando apenas o bloco central vazio. Ele serve para armazenar itens e blocos.",
-      "answer": "Para fazer um baú, você precisa de oito tábuas de madeira. Coloque as tábuas em uma grade de 3×3, deixando apenas o bloco central vazio.",
-      "f1": 0.6296296296296297,
+      "answer": "Para fazer um baú, você precisa de oito tábuas de madeira. Coloque essas tábuas ao redor de uma grade de 3×3, deixando apenas o bloco central vazio.",
+      "f1": 0.6071428571428571,
       "context": [
         {
           "id": "faq:bau",
@@ -784,8 +772,8 @@
       "id": "tocha",
       "question": "como faço tochas?",
       "reference": "Para fazer tochas, coloque um carvão ou carvão vegetal acima de um graveto, produzindo quatro tochas. Elas iluminam ambientes e derretem gelo e neve.",
-      "answer": "Para fazer tochas, você precisa de carvão ou carvão vegetal e um graveto. Coloque o carvão ou carvão vegetal acima de um graveto e ele produzirá quatro tochas.",
-      "f1": 0.6538461538461539,
+      "answer": "Para fazer tochas, combine um carvão ou carvão vegetal com um graveto na sua mão direita.",
+      "f1": 0.5,
       "context": [
         {
           "id": "faq:tocha",
@@ -859,8 +847,8 @@
       "id": "escada",
       "question": "como faço escadas?",
       "reference": "Escadas são criadas com sete gravetos dispostos em forma de ‘H’: três gravetos na coluna esquerda, três na coluna direita e um no centro da linha do meio. Três escadas são geradas e permitem subir verticalmente.",
-      "answer": "Para criar escadas, você precisa usar sete gravetos dispostos em forma de 'H'. Isso significa que três gravetos devem estar na coluna esquerda, três na coluna direita e um no centro da linha do meio. Ao fazer isso, três escadas serão geradas, permitindo que você suba verticalmente.",
-      "f1": 0.6987951807228916,
+      "answer": "Para criar escadas, você precisa de sete gravetos dispostos em forma de 'H'. Coloque três gravetos na coluna esquerda, três na coluna direita e um no centro da linha do meio. Isso gerará três escadas que permitem subir verticalmente.",
+      "f1": 0.8,
       "context": [
         {
           "id": "faq:escada",
@@ -934,8 +922,8 @@
       "id": "vida_fome",
       "question": "como funcionam a vida e a fome?",
       "reference": "No Minecraft, a barra de vida exibe dez corações, cada um valendo dois pontos, totalizando 20 pontos de vida. Dano reduz esses pontos; com fome cheia, a vida se regenera. A barra de fome possui dez ícones de coxa de frango; cada metade representa um ponto de fome. A fome diminui quando você corre, minera ou luta e aumenta ao comer alimentos. Quando a fome está acima de 18, ocorre regeneração de vida; abaixo de 6 você não pode correr; se chegar a zero, a vida começa a diminuir.",
-      "answer": "Na Minecraft, a vida e a fome são duas barras importantes que afetam o jogador:\n\n1. **Barra de Vida:** Exibe dez corações, cada um valendo dois pontos, totalizando 20 pontos de vida. Dano reduz esses pontos. Com fome cheia, a vida se regenera.\n\n2. **Barra de Fome:** Possui dez ícones de coxa de frango; cada metade representa um ponto de fome. A fome diminui quando você corre, minera ou luta e aumenta ao comer alimentos. Quando a fome está acima de 18, ocorre regeneração de vida; abaixo de 6 você não pode correr; se chegar a zero, a vida começa a diminuir.\n\nAlimentos cozidos duram mais e aumentam a saturação (sensação de saciedade). Dormir em uma cama define o ponto de renascimento e pula a noite.",
-      "f1": 0.8186046511627907,
+      "answer": "A vida e a fome no Minecraft funcionam da seguinte maneira:\n\n- **Vida:** A barra de vida exibe dez corações, cada um valendo dois pontos, totalizando 20 pontos de vida. Dano reduz esses pontos; com fome cheia, a vida se regenera.\n- **Fome:** A barra de fome possui dez ícones de coxa de frango; cada metade representa um ponto de fome. A fome diminui quando você corre, minera ou luta e aumenta ao comer alimentos. Quando a fome está acima de 18, ocorre regeneração de vida; abaixo de 6 você não pode correr; se chegar a zero, a vida começa a diminuir.",
+      "f1": 0.9417989417989417,
       "context": [
         {
           "id": "faq:vida_fome",

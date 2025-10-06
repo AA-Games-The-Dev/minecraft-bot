@@ -489,6 +489,20 @@
           }
         },
         {
+          "id": "doc:tabuas.md#5",
+          "sourceId": "tabuas.md#5",
+          "type": "doc",
+          "similarity": 0.5976048964264445,
+          "lexicalScore": 0.5,
+          "score": 0.7726048964264445,
+          "text": "### Reparo (bigorna)\r\n\r\n* Tábuas reparam itens do **nível madeira**: espada, picareta, machado, pá, enxada e **escudo**. ---\r\n\r\n## Sons\r\n\r\n* Tábuas comuns usam o conjunto de sons “wood”; cerejeira tem variação “cherry_wood”; carmesim/distorcida usam o conjunto “nether wood”. ---\r\n\r\n## Dicas rápidas\r\n\r\n* Converta troncos em tábuas para **maximizar rendimento**: 1 tronco ⇒ 4 tábuas; 2 tábuas ⇒ 4 gravetos. * Use **tábuas do Nether** (carmesim/distorcida) quando quiser **imunidade a fogo** em construções no Nether.",
+          "resposta_ref": null,
+          "metadata": {
+            "source": "tabuas.md",
+            "chunk": 5
+          }
+        },
+        {
           "id": "doc:crafting_basics.md#0",
           "sourceId": "crafting_basics.md#0",
           "type": "doc",
@@ -500,32 +514,6 @@
           "metadata": {
             "source": "crafting_basics.md",
             "chunk": 0
-          }
-        },
-        {
-          "id": "faq:enxada_madeira",
-          "sourceId": "enxada_madeira",
-          "type": "faq",
-          "similarity": 0.5312392277965107,
-          "lexicalScore": 0.5,
-          "score": 0.7062392277965106,
-          "text": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio.",
-          "resposta_ref": "A enxada de madeira é feita com 2 tábuas na linha superior (nas duas primeiras colunas) e 2 gravetos empilhados na coluna central. Ela prepara a terra para plantio.",
-          "metadata": {
-            "perguntas": [
-              "como faço uma enxada?",
-              "como craftar hoe?"
-            ],
-            "fontes": [
-              "Minecraft crafting guide"
-            ],
-            "trechos": [
-              {
-                "doc": "crafting_basics.md",
-                "secao": "Ferramentas de madeira",
-                "descricao": "Passo a passo para montar a enxada."
-              }
-            ]
           }
         }
       ]
